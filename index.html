@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>סיציליה 2026 — גל וקארין</title>
+<meta name="description" content="המדריך המלא לטיול: מסלול יום־יום, תקציב, הזמנות וקישורים.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🇮🇹</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500;700;900&family=Assistant:wght@300;400;600;700&display=swap">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<style>
+:root{
+  --paper:#f6f7f4;--card:#fffffe;--ink:#20241e;--muted:#6b7065;--hair:#dfe2da;
+  --sea:#2f6f83;--sea-soft:#e4eef1;--lava:#8b3a2b;--lava-soft:#f7e9e4;
+  --sun:#a8791a;--sun-soft:#f8f0da;--olive:#5f6b4a;
+  --bed-pa:#2f6f83;--bed-ce:#a8791a;--bed-ta:#5f6b4a;
+  --shadow:0 1px 2px rgba(32,36,30,.05),0 8px 24px -16px rgba(32,36,30,.18);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#151713;--card:#1d201b;--ink:#e9eae3;--muted:#9aa093;--hair:#2e322a;
+  --sea:#7fbccd;--sea-soft:#1b2b31;--lava:#d98f7c;--lava-soft:#2e2020;
+  --sun:#d9ac4e;--sun-soft:#2b2517;--olive:#9aa87e;
+  --bed-pa:#7fbccd;--bed-ce:#d9ac4e;--bed-ta:#9aa87e;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 28px -18px rgba(0,0,0,.7);
+}}
+:root[data-theme="dark"]{
+  --paper:#151713;--card:#1d201b;--ink:#e9eae3;--muted:#9aa093;--hair:#2e322a;
+  --sea:#7fbccd;--sea-soft:#1b2b31;--lava:#d98f7c;--lava-soft:#2e2020;
+  --sun:#d9ac4e;--sun-soft:#2b2517;--olive:#9aa87e;
+  --bed-pa:#7fbccd;--bed-ce:#d9ac4e;--bed-ta:#9aa87e;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 28px -18px rgba(0,0,0,.7);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:4.5rem}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;direction:rtl;text-align:right;background:var(--paper);color:var(--ink);
+  font-family:"Assistant","Segoe UI",system-ui,sans-serif;font-size:17px;line-height:1.65;
+  font-variant-numeric:tabular-nums;}
+.wrap{max-width:52rem;margin:0 auto;padding:0 1.25rem 6rem}
+h1,h2,h3,h4{font-family:"Frank Ruhl Libre",Georgia,serif;text-wrap:balance;margin:0}
+a{color:var(--sea)}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--sea);outline-offset:2px}
+
+/* hero */
+header.mast{padding:3.5rem 0 2rem}
+.kicker{font-size:.78rem;font-weight:700;letter-spacing:.14em;color:var(--sea);margin:0 0 1rem}
+h1{font-weight:900;font-size:clamp(2.5rem,8vw,4.3rem);line-height:1.02;letter-spacing:-.01em;margin-bottom:1rem}
+.dek{font-size:1.15rem;color:var(--muted);max-width:34rem;margin:0}
+.dek strong{color:var(--ink);font-weight:600}
+.facts{display:grid;gap:.85rem 1.75rem;grid-template-columns:repeat(auto-fit,minmax(8.5rem,1fr));
+  margin:2.25rem 0 0;padding:1.4rem 0;border-top:1px solid var(--hair);border-bottom:1px solid var(--hair)}
+.fact dt{font-size:.72rem;font-weight:700;letter-spacing:.12em;color:var(--muted);margin:0 0 .2rem}
+.fact dd{margin:0;font-weight:600;font-size:1.02rem}
+
+/* nav */
+nav.top{position:sticky;top:0;z-index:600;display:flex;gap:.4rem;overflow-x:auto;padding:.7rem 0;
+  margin:2rem 0 0;background:color-mix(in srgb,var(--paper) 88%,transparent);
+  backdrop-filter:blur(8px);border-bottom:1px solid var(--hair)}
+nav.top a{flex:none;text-decoration:none;color:var(--muted);font-size:.86rem;font-weight:600;
+  white-space:nowrap;padding:.3rem .7rem;border-radius:.4rem;border:1px solid transparent}
+nav.top a:hover,nav.top a:focus-visible{color:var(--ink);border-color:var(--hair);background:var(--card)}
+
+h2.sec{font-weight:700;font-size:1.95rem;margin:3.5rem 0 .7rem}
+.lede{color:var(--muted);margin:0 0 1.5rem;max-width:36rem}
+
+/* map */
+#map{height:340px;border-radius:.6rem;border:1px solid var(--hair);margin:0 0 .75rem;z-index:1}
+.legend{display:flex;flex-wrap:wrap;gap:.5rem;margin:0 0 1.5rem}
+.chip{display:inline-flex;align-items:center;gap:.5rem;font-size:.88rem;font-weight:600;
+  padding:.35rem .75rem;border:1px solid var(--hair);border-radius:2rem;background:var(--card)}
+.chip span.n{color:var(--muted);font-weight:400}
+.dot{width:.65rem;height:.65rem;border-radius:50%;flex:none}
+.dot.pa{background:var(--bed-pa)}.dot.ce{background:var(--bed-ce)}.dot.ta{background:var(--bed-ta)}
+
+/* day cards */
+.day{background:var(--card);border:1px solid var(--hair);border-radius:.6rem;box-shadow:var(--shadow);
+  margin:0 0 1.25rem;overflow:hidden;border-right:5px solid var(--hair)}
+.day.pa{border-right-color:var(--bed-pa)}.day.ce{border-right-color:var(--bed-ce)}
+.day.ta{border-right-color:var(--bed-ta)}.day.go{border-right-color:var(--lava)}
+.dhead{padding:1.4rem 1.5rem 1.1rem;border-bottom:1px solid var(--hair)}
+.dnum{font-size:.74rem;font-weight:700;letter-spacing:.13em;color:var(--muted);margin:0 0 .35rem}
+.day h3{font-weight:700;font-size:1.5rem;margin:0 0 .7rem;line-height:1.2}
+.meta{display:flex;flex-wrap:wrap;gap:.4rem .5rem;font-size:.88rem}
+.tag{display:inline-block;padding:.2rem .6rem;border-radius:.35rem;background:var(--paper);
+  border:1px solid var(--hair);color:var(--muted);font-weight:600}
+.tag.bed{background:var(--sea-soft);border-color:transparent;color:var(--ink)}
+ol.hours{list-style:none;margin:0;padding:.5rem 0}
+ol.hours>li{display:grid;grid-template-columns:4.6rem 1fr;gap:0 1rem;padding:.75rem 1.5rem;align-items:baseline}
+ol.hours>li+li{border-top:1px solid var(--hair)}
+.t{font-weight:700;font-size:.95rem;color:var(--sea)}
+.what{margin:0}
+.cost{display:block;margin-top:.15rem;font-size:.85rem;color:var(--muted);font-weight:600}
+.note{display:block;margin-top:.3rem;font-size:.88rem;color:var(--lava)}
+.quote{display:block;margin-top:.3rem;font-size:.9rem;color:var(--muted);font-style:italic}
+.src{display:block;margin-top:.35rem;font-size:.8rem;color:var(--muted)}
+.links{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.5rem}
+.links a{display:inline-block;font-size:.78rem;font-weight:600;text-decoration:none;
+  padding:.15rem .55rem;border:1px solid var(--hair);border-radius:.35rem;background:var(--paper);color:var(--sea)}
+.links a:hover{background:var(--sea-soft)}
+.flag{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.05em;
+  padding:.1rem .45rem;border-radius:.3rem;vertical-align:.1em;margin-inline-start:.4rem}
+.flag.open{background:var(--sun-soft);color:var(--sun)}
+.flag.done{background:var(--sea-soft);color:var(--sea)}
+.flag.star{background:var(--lava-soft);color:var(--lava)}
+.dfoot{padding:1rem 1.5rem 1.2rem;border-top:1px solid var(--hair);background:var(--paper);font-size:.92rem}
+.dfoot p{margin:0 0 .5rem}.dfoot p:last-child{margin-bottom:0}
+
+/* callouts */
+.call{border:1px solid var(--hair);border-right:4px solid var(--sun);background:var(--card);
+  border-radius:.5rem;padding:1.25rem 1.4rem;margin:0 0 1.25rem;box-shadow:var(--shadow)}
+.call.sea{border-right-color:var(--sea)}.call.lava{border-right-color:var(--lava)}
+.call h3{font-size:1.2rem;font-weight:700;margin:0 0 .6rem}
+.call ul{margin:0;padding-inline-start:1.2rem}
+.call li{margin:0 0 .45rem}.call li:last-child{margin-bottom:0}
+
+/* tables */
+.scroll{overflow-x:auto;margin:0 0 1.25rem;border:1px solid var(--hair);border-radius:.5rem;background:var(--card)}
+table{border-collapse:collapse;width:100%;min-width:28rem;font-size:.94rem}
+th,td{padding:.7rem 1rem;text-align:right;border-bottom:1px solid var(--hair)}
+thead th{font-size:.74rem;letter-spacing:.09em;font-weight:700;color:var(--muted);background:var(--paper)}
+tbody tr:last-child td{border-bottom:none}
+tr.hi td{background:var(--sea-soft);font-weight:600}
+td.n{font-weight:600}
+
+/* calculator */
+.calc{background:var(--card);border:1px solid var(--hair);border-radius:.6rem;padding:1.5rem;
+  box-shadow:var(--shadow);margin:0 0 1.25rem}
+.row{display:grid;grid-template-columns:1fr auto;gap:.6rem 1rem;align-items:center;margin-bottom:1.1rem}
+.row label{font-weight:600}
+.row .sub{display:block;font-size:.82rem;color:var(--muted);font-weight:400}
+.row output{font-weight:700;font-size:1.05rem;color:var(--sea);min-width:5.5rem;text-align:left}
+input[type=range]{grid-column:1/-1;width:100%;accent-color:var(--sea)}
+.total{border-top:2px solid var(--hair);padding-top:1.1rem;margin-top:.4rem;
+  display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:.5rem}
+.total .lbl{font-weight:700;font-size:1.1rem}
+.total .amt{font-family:"Frank Ruhl Libre",serif;font-weight:900;font-size:2.1rem;line-height:1}
+.verdict{margin-top:.6rem;font-size:.95rem;font-weight:600}
+.verdict.ok{color:var(--olive)}.verdict.over{color:var(--lava)}
+
+details{background:var(--card);border:1px solid var(--hair);border-radius:.5rem;
+  padding:.9rem 1.2rem;margin:0 0 .7rem}
+summary{cursor:pointer;font-weight:600}
+details[open] summary{margin-bottom:.7rem}
+footer.end{margin-top:4rem;padding-top:1.5rem;border-top:1px solid var(--hair);color:var(--muted);font-size:.9rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="mast">
+  <p class="kicker">‎5–12 בספטמבר 2026 · גל וקארין</p>
+  <h1>סיציליה,<br>שבעה לילות</h1>
+  <p class="dek">שלוש מיטות, מעבר אמיתי אחד, ושישה ימים מלאים בין פלרמו לאתנה. <strong>כל מה שסגרנו, במקום אחד.</strong></p>
+  <dl class="facts">
+    <div class="fact"><dt>טיסה</dt><dd>TLV → פלרמו</dd></div>
+    <div class="fact"><dt>נחיתה</dt><dd>שבת 5.9, 23:55</dd></div>
+    <div class="fact"><dt>חזרה</dt><dd>שבת 12.9, 16:25</dd></div>
+    <div class="fact"><dt>יעד תקציב</dt><dd>₪13,790</dd></div>
+  </dl>
+  <nav class="top" aria-label="ניווט">
+    <a href="#map-sec">המפה</a><a href="#days">המסלול</a><a href="#budget">תקציב</a>
+    <a href="#calc">מחשבון</a><a href="#book">הזמנות</a><a href="#intel">מה חשוב לדעת</a><a href="#pack">ציוד</a>
+  </nav>
+</header>
+
+<section id="map-sec">
+  <h2 class="sec">איפה אנחנו, מתי</h2>
+  <p class="lede">שלוש מיטות בלבד. הקו המקווקו הוא המסלול: פלרמו → צ'פאלו → טאורמינה, ובסוף חזרה מערבה לטיסה.</p>
+  <div id="map"></div>
+  <div class="legend">
+    <span class="chip"><span class="dot pa"></span>פלרמו <span class="n">· לילות 1–2</span></span>
+    <span class="chip"><span class="dot ce"></span>צ'פאלו <span class="n">· לילה 3</span></span>
+    <span class="chip"><span class="dot ta"></span>טאורמינה <span class="n">· לילות 4–7</span></span>
+  </div>
+</section>
+
+<section id="days">
+  <h2 class="sec">המסלול, יום אחרי יום</h2>
+  <p class="lede">הפס בצד ימין הוא צבע המיטה של אותו לילה. <span class="flag open">פתוח</span> = עוד לא הוזמן · <span class="flag done">סגור</span> = מוזמן · <span class="flag star">היילייט</span> = מה שלא מוותרים עליו.</p>
+
+  <!-- D1 -->
+  <article class="day pa">
+    <div class="dhead"><p class="dnum">יום 1 · שבת 5 בספטמבר</p><h3>הנחיתה</h3>
+    <div class="meta"><span class="tag bed">🛏 פלרמו 1/2</span><span class="tag">בלי רכב</span></div></div>
+    <ol class="hours">
+      <li><span class="t">23:55</span><p class="what">נחיתה. יציאה עם מזוודה סביב 00:20.</p></li>
+      <li><span class="t">00:30</span><p class="what"><b>מונית במחיר קבוע לעיר</b>, ~50 דקות.<span class="cost">€45–50 לרכב, לא לאדם</span><span class="note">רק מהדלפק הרשמי. לא ללכת עם מי שתופס אתכם באולם.</span></p></li>
+      <li><span class="t">01:15</span><p class="what">צ'ק־אין.<span class="note">חובה לוודא מראש קוד כניסה עצמי או קבלה 24/7.</span></p></li>
+    </ol>
+  </article>
+
+  <!-- D2 -->
+  <article class="day pa">
+    <div class="dhead"><p class="dnum">יום 2 · ראשון 6 בספטמבר</p><h3>פלרמו, יום מלא, ברגל</h3>
+    <div class="meta"><span class="tag bed">🛏 פלרמו 2/2</span><span class="tag">אותה מיטה</span><span class="tag">€190–250</span></div></div>
+    <ol class="hours">
+      <li><span class="t">09:00</span><p class="what"><b>גרניטה ובריוש</b> — טובלים את הבריוש בגרניטה.<span class="cost">€10–14</span><span class="src">3 טרנסקריפטים</span></p></li>
+      <li><span class="t">09:45</span><p class="what"><b>שוק קאפו</b> — הרגוע מבין השניים. דג חרב, סרדינים ממולאים, ארנצ'יני, פנלה.<span class="cost">€15–25</span><span class="note">סוגר 13:00. ביום ראשון השווקים בבוקר בלבד — אבל גם רגועים ואינטימיים יותר.</span>
+        <span class="links"><a href="https://www.youtube.com/results?search_query=Capo+Market+Palermo+street+food" target="_blank" rel="noopener">▶ וידאו</a><a href="https://www.google.com/maps/search/Mercato+del+Capo+Palermo" target="_blank" rel="noopener">📍 מפה</a></span></p></li>
+      <li><span class="t">11:15</span><p class="what"><b>קוואטרו קאנטי</b> — הצומת הברוקי עם ארבע חזיתות, אחת לכל עונה. וכיכר פרטוריה.<span class="cost">חינם</span>
+        <span class="links"><a href="https://www.youtube.com/results?search_query=Quattro+Canti+Palermo" target="_blank" rel="noopener">▶ וידאו</a><a href="https://www.google.com/maps/search/Quattro+Canti+Palermo" target="_blank" rel="noopener">📍 מפה</a></span></p></li>
+      <li><span class="t">12:00</span><p class="what"><b>גג קתדרלת פלרמו</b> — לא נכנסים, עולים על הגג. נוף על העיר, ההרים והים.<span class="cost">€7/אדם</span><span class="src">היילייט של 2 מקורות שונים</span>
+        <span class="links"><a href="https://www.youtube.com/results?search_query=Palermo+Cathedral+rooftop+view" target="_blank" rel="noopener">▶ וידאו</a><a href="https://www.google.com/maps/search/Cattedrale+di+Palermo" target="_blank" rel="noopener">📍 מפה</a></span></p></li>
+      <li><span class="t">13:00</span><p class="what">צהריים — אוכל רחוב או טרטוריה.<span class="cost">€25–35</span><span class="flag open">פתוח</span></p></li>
+      <li><span class="t">14:00</span><p class="what"><b>מלון — מנוחה ומקלחת.</b> בסיציליה הכל סגור 14:00–19:00, וזה בדיוק מה שמאפשר את הערב.</p></li>
+      <li><span class="t">15:45</span><p class="what"><b>אוטובוס למונדלו</b>, 25 דק'. חול לבן, מים טורקיז, מונטה פלגרינו מאחור, ביתן ליברטי על המים.<span class="cost">€25–40</span><span class="note">יום ראשון — כל פלרמו שם. עמוס אבל תוסס.</span>
+        <span class="links"><a href="https://www.youtube.com/results?search_query=Mondello+beach+Palermo" target="_blank" rel="noopener">▶ וידאו</a><a href="https://www.google.com/maps/search/Mondello+Beach" target="_blank" rel="noopener">📍 מפה</a></span></p></li>
+      <li><span class="t">18:30</span><p class="what"><b>אפריטיבו על הים</b> במונדלו.<span class="cost">€20–28</span><span class="flag open">פתוח</span></p></li>
+      <li><span class="t">20:00</span><p class="what">🚕 <b>מונית חזרה, ~€20 — לא אוטובוס.</b><span class="cost">€20</span><span class="note">ראשון + אחרי אפריטיבו + קו 806 עמוס = לא ככה מסיימים ערב טוב.</span></p></li>
+      <li><span class="t">21:00</span><p class="what"><b>ארוחת ערב</b> בטרטוריה במרכז — פסטה אלה נורמה, דגים.<span class="cost">€50–65</span><span class="flag open">פתוח</span></p></li>
+      <li><span class="t">22:30</span><p class="what"><b>ווצ'ריה</b> / <b>Dal Barone</b> — שולחנות על הרחוב.<span class="cost">€25–40</span><span class="note">בירת הכייסים. ארנק בכיס קדמי.</span></p></li>
+      <li><span class="t">23:30</span><p class="what">קנולי ב-<b>I Segreti del Chiostro</b>.<span class="cost">€8–12</span><span class="src">מפת נדב</span></p></li>
+    </ol>
+    <div class="dfoot">
+      <p><b>הערה כנה:</b> חיי הלילה ביום ראשון חלשים יותר. ווצ'ריה הופכת ל"מסיבת רחוב" בעיקר בשישי־שבת. יהיה נחמד, לא פיצוץ.</p>
+      <p><b>רזרבה:</b> תיאטרו מאסימו (מדרגות הסנדק 3) · קטקומבות הקפוצ'ינים ~€3.50 · פורו איטליקו, טיילת המקומיים.</p>
+    </div>
+  </article>
+
+  <!-- D3 -->
+  <article class="day ce">
+    <div class="dhead"><p class="dnum">יום 3 · שני 7 בספטמבר</p><h3>בוקר בפלרמו, ואז צ'פאלו</h3>
+    <div class="meta"><span class="tag bed">🛏 צ'פאלו · לילה יחיד</span><span class="tag">🚗 1:05</span><span class="tag">€230–290</span></div></div>
+    <ol class="hours">
+      <li><span class="t">08:30</span><p class="what">גרניטה אחרונה בפלרמו, אורזים.<span class="cost">€10–14</span></p></li>
+      <li><span class="t">09:30</span><p class="what"><b>קפלה פלטינה</b> — תקרה ערבית, פסיפסים ביזנטיים ומבנה נורמני, הכל בחדר אחד.<span class="cost">€30–40</span><span class="quote">"אחת הקפלות הכי מרשימות שראיתי. התקרה חד־פעמית."</span><span class="src">רדיט · 2,546 👍</span>
+        <span class="links"><a href="https://www.youtube.com/results?search_query=Cappella+Palatina+Palermo+4K" target="_blank" rel="noopener">▶ וידאו</a><a href="https://www.federicosecondo.org/" target="_blank" rel="noopener">🎫 כרטיסים</a></span></p></li>
+      <li><span class="t">11:15</span><p class="what"><b>איסוף הרכב במרכז פלרמו.</b><span class="note">וידאו של כל שריטה ושל מחוון הדלק לפני שיוצאים.</span></p></li>
+      <li><span class="t">12:00</span><p class="what">כביש החוף לצ'פאלו, שעה וחמש.<span class="cost">~€5 דלק</span></p></li>
+      <li><span class="t">13:15</span><p class="what">צ'ק־אין.<span class="note">ZTL — חונים מחוץ למרכז. לברר את המקום מהמאחסן מראש.</span></p></li>
+      <li><span class="t">13:45</span><p class="what"><b>Il Locale</b> — פיצה.<span class="cost">€30–40</span><span class="quote">"הפיצה האהובה עלינו בכל סיציליה. אנשים באים לצ'פאלו במיוחד בשבילה."</span><span class="note">לאמת שהם עושים צהריים — הרבה פיצריות איטלקיות פותחות רק בערב.</span></p></li>
+      <li><span class="t">15:00</span><p class="what"><b>חוף פורטו וקיו</b> — האור מצד העיר אחה"צ הוא הטוב ביותר.<span class="cost">חינם</span>
+        <span class="links"><a href="https://www.youtube.com/results?search_query=Cefalu+Sicily+beach+old+town" target="_blank" rel="noopener">▶ וידאו</a><a href="https://www.google.com/maps/search/Cefalu+beach" target="_blank" rel="noopener">📍 מפה</a></span></p></li>
+      <li><span class="t">17:00</span><p class="what">סמטאות העיר העתיקה והקתדרלה מ־1131, עם פסיפס הכריסטוס פנטוקרטור.<span class="cost">€5–10</span></p></li>
+      <li><span class="t">18:30</span><p class="what">גלידה ב-<b>Sapore di Sale</b> — טעם "Etna", פיסטוק ודובדבן.<span class="cost">€8–12</span></p></li>
+      <li><span class="t">19:24</span><p class="what"><b>השקיעה</b> מהחוף או מהסלעים. בלי לוח זמנים.<span class="cost">חינם</span></p></li>
+      <li><span class="t">20:00</span><p class="what"><b>Le Petit Tonneau — על המרפסת.</b> יין וגבינות מעל הים אחרי השקיעה.<span class="cost">€30 שולם + תוספות</span><span class="flag done">סגור</span><span class="note">להגיע 19:50. לוודא במפורש "in terrazza".</span></p></li>
+      <li><span class="t">21:15</span><p class="what"><b>La cantina del Barone</b> (4.7) או <b>Enoteca La Cave</b> (4.8).<span class="cost">€50–65</span><span class="flag open">פתוח</span><span class="src">מפת נדב</span></p></li>
+    </ol>
+  </article>
+
+  <!-- D4 -->
+  <article class="day ta">
+    <div class="dhead"><p class="dnum">יום 4 · שלישי 8 בספטמבר</p><h3>בוקר בצ'פאלו, ואז טאורמינה</h3>
+    <div class="meta"><span class="tag bed">🛏 טאורמינה 1/4</span><span class="tag">🚗 2:10</span><span class="tag">€320–430</span></div></div>
+    <ol class="hours">
+      <li><span class="t">08:00</span><p class="what">גרניטה ובריוש. <b>מוקדם בכוונה</b> — הטיפוס אחר כך בשמש.<span class="cost">€10–14</span></p></li>
+      <li><span class="t">09:00</span><p class="what"><b>טיפוס La Rocca</b> — 45 דק' למעלה. בפסגה חורבות מקדשים בני 3,000 שנה, העתיקות בסיציליה.<span class="cost">€10</span><span class="note">נפתח 09:00, לא לפני.</span>
+        <span class="links"><a href="https://www.youtube.com/results?search_query=La+Rocca+Cefalu+hike" target="_blank" rel="noopener">▶ וידאו</a></span></p></li>
+      <li><span class="t">11:00</span><p class="what">טבילה אחרונה ומקלחת.<span class="cost">חינם</span></p></li>
+      <li><span class="t">12:15</span><p class="what"><b>Sfrigola</b> (הארנצ'יני הטוב) או <b>La Cefalù Nostrana</b> (4.9).<span class="cost">€20–28</span><span class="flag open">פתוח</span></p></li>
+      <li><span class="t">14:00</span><p class="what">A20 לטאורמינה. נוף ים כל הדרך.<span class="cost">€10 אגרה + €12 דלק</span></p></li>
+      <li><span class="t">16:30</span><p class="what">הגעה.<span class="cost">חניון €15–25</span><span class="note">ZTL — מנווטים לחניון בשער העיר, לא לכתובת הלינה.</span></p></li>
+      <li><span class="t">17:15</span><p class="what">צ'ק־אין. <b>ארבעה לילות באותה מיטה</b> — סוף האריזות.</p></li>
+      <li><span class="t">18:00</span><p class="what"><b>קורסו אומברטו</b> — חנויות הקרמיקה עם ראשי ה-Teste di Moro. פתוח עד 22:00.<span class="cost">חינם</span></p></li>
+      <li><span class="t">18:45</span><p class="what"><b>קוקטייל ב-Four Seasons San Domenico</b> — 5 דק' הליכה, מיושבים לפני השקיעה. ה-Bar &amp; Chiostro הוא הקלויסטר מ-White Lotus.<span class="cost">€50–80</span><span class="flag star">היילייט</span><span class="note">להזמין: +39 0942 613 254. לא בשורט.</span>
+        <span class="links"><a href="https://www.youtube.com/results?search_query=San+Domenico+Palace+Taormina+White+Lotus" target="_blank" rel="noopener">▶ וידאו</a></span></p></li>
+      <li><span class="t">20:30</span><p class="what"><b>פיאצה IX אפריל</b> בדרך לארוחה — מגדל השעון מואר, נגני רחוב, אתנה באופק.<span class="cost">חינם</span><span class="note">גם הכיכר וגם הקלויסטר הן נקודות שקיעה (19:23) — אי אפשר בשתיהן. השקיעה מהקלויסטר, הכיכר בערב.</span></p></li>
+      <li><span class="t">21:00</span><p class="what"><b>Ristorante Pirandello 2.0</b> — 4.8 (5,093).<span class="cost">€60–80</span><span class="flag open">להזמין</span><span class="src">מפת נדב</span></p></li>
+    </ol>
+    <div class="dfoot"><p><b>למה עיר עתיקה ולא ג'רדיני נקסוס:</b> שלושה מארבעת הערבים נגמרים בהליכה חזרה עם יין. מנקסוס כל ערב כזה נגמר במונית, או שמישהו לא שותה.</p></div>
+  </article>
+
+  <!-- D5 -->
+  <article class="day ta">
+    <div class="dhead"><p class="dnum">יום 5 · רביעי 9 בספטמבר</p><h3>הר אתנה</h3>
+    <div class="meta"><span class="tag bed">🛏 טאורמינה 2/4</span><span class="tag">🚗 ~2:45</span><span class="tag">€250–330</span></div></div>
+    <ol class="hours">
+      <li><span class="t">07:30</span><p class="what">יוצאים.<span class="note">סוודר ונעליים סגורות — קר ב-2,500 מ' גם בספטמבר. הענן נכנס אחה"צ, לכן מוקדם.</span></p></li>
+      <li><span class="t">09:00</span><p class="what"><b>רפיוג'ו ספיינצה: רכבל + ג'יפ + מדריך עד 2,850 מ'.</b> הליכה על מדבר לבה עם מדריך געשי.<span class="cost">€82/אדם</span><span class="flag star">היילייט</span><span class="note">גרסאות זולות: רכבל בלבד €54/אדם · מכתשי סילבסטרי בהליכה חינם.</span>
+        <span class="links"><a href="https://www.youtube.com/results?search_query=Mount+Etna+cable+car+jeep+summit+2900" target="_blank" rel="noopener">▶ וידאו</a><a href="https://www.funiviaetna.com/" target="_blank" rel="noopener">🎫 רכבל</a><a href="https://www.google.com/maps/search/Rifugio+Sapienza+Etna" target="_blank" rel="noopener">📍 מפה</a></span></p></li>
+      <li><span class="t">12:30</span><p class="what">ירידה, מכתשי סילבסטרי.<span class="cost">חינם</span></p></li>
+      <li><span class="t">13:30</span><p class="what"><b>יקב על הצד הצפוני</b> — Nerello Mascalese על אדמת לבה. + צהריים.<span class="cost">€50–80</span><span class="quote">"האזור האהוב עלינו בכל סיציליה."</span><span class="src">רדיט · 594 👍 + 4,729 👍</span><span class="note">מי שנוהג לא טועם.</span>
+        <span class="links"><a href="https://www.youtube.com/results?search_query=Etna+north+side+winery+Nerello+Mascalese" target="_blank" rel="noopener">▶ וידאו</a></span></p></li>
+      <li><span class="t">16:00</span><p class="what">חזרה לטאורמינה.</p></li>
+      <li><span class="t">17:00</span><p class="what"><b>בבית. אחה"צ פנוי</b> — מקלחת ומנוחה.</p></li>
+      <li><span class="t">20:30</span><p class="what">ארוחה קלה בעיר.<span class="cost">€50–70</span><span class="flag open">פתוח</span></p></li>
+    </ol>
+    <div class="dfoot"><p><b>אלקנטרה עברה למחר:</b> היא נסגרת 18:00 בספטמבר, המים 8–12°C, ונקיק מאבד אור מוקדם כי הקירות חוסמים. השעה הנכונה היא בוקר.</p></div>
+  </article>
+
+  <!-- D6 -->
+  <article class="day ta">
+    <div class="dhead"><p class="dnum">יום 6 · חמישי 10 בספטמבר</p><h3>התיאטרון והים</h3>
+    <div class="meta"><span class="tag bed">🛏 טאורמינה 3/4</span><span class="tag">אפס נהיגה</span><span class="tag">€280–360</span></div></div>
+    <ol class="hours">
+      <li><span class="t">08:30</span><p class="what"><b>Bam Bar</b> — הגרניטה המפורסמת (4.5, 9,889).<span class="cost">€12–16</span><span class="quote">מיוטיוב, בכנות: "טעים מאוד, אבל לא בהכרח טוב יותר מגרניטות אחרות בסיציליה."</span></p></li>
+      <li><span class="t">09:00</span><p class="what"><b>התיאטרון היווני</b> — מאה 3 לפנה"ס. הבמה ממסגרת את אתנה ואת הים בתוך הקשת. <b>ב-09:00 כמעט לבד; מ-10:30 מתמלא.</b><span class="cost">€28</span><span class="flag star">היילייט</span><span class="note">מדרגות אבן לא אחידות, לא נגיש.</span>
+        <span class="links"><a href="https://www.youtube.com/results?search_query=Teatro+Antico+Taormina+Greek+theatre+4K" target="_blank" rel="noopener">▶ וידאו</a><a href="https://www.google.com/maps/search/Teatro+Antico+di+Taormina" target="_blank" rel="noopener">📍 מפה</a></span></p></li>
+      <li><span class="t">11:00</span><p class="what"><b>Via Roma</b> — ההליכה על הצוק, "נוף גלויה בכל עיקול". ובדרך גני <b>Villa Comunale</b>.<span class="cost">€5</span></p></li>
+      <li><span class="t">13:15</span><p class="what">צהריים בעיר.<span class="cost">€35–50</span><span class="flag open">פתוח</span></p></li>
+      <li><span class="t">14:30</span><p class="what"><b>סיאסטה אמיתית</b> — מקלחת ומנוחה לפני הסירה.</p></li>
+      <li><span class="t">17:30</span><p class="what"><b>סירת שקיעה, שעתיים.</b> כוללת Grotta Azzurra, מערת האוהבים, קאפו טאורמינה, מזארו, עצירת שחייה, ופרוסקו עם עוגיות שקדים. <b>מקס 12 אנשים.</b><span class="cost">€90 לשניים</span><span class="flag star">היילייט</span><span class="note">ביטול חופשי 24 שעות.</span>
+        <span class="links"><a href="https://www.youtube.com/results?search_query=Taormina+sunset+boat+tour+Grotta+Azzurra" target="_blank" rel="noopener">▶ וידאו</a></span></p></li>
+      <li><span class="t">21:00</span><p class="what"><b>Sky Rooftop</b> — ארוחה עם נוף לאתנה ולעיר.<span class="cost">€70</span><span class="flag open">להזמין</span></p></li>
+    </ol>
+    <div class="dfoot"><p><b>איזולה בלה עברה למחר:</b> הסירה כבר כוללת עצירת שחייה. אין היגיון לשחות ב-14:30, לעלות רטובים על סירה, ואז להגיע לארוחה.</p></div>
+  </article>
+
+  <!-- D7 -->
+  <article class="day ta">
+    <div class="dhead"><p class="dnum">יום 7 · שישי 11 בספטמבר</p><h3>מים, נקיק וכפר על הצוק</h3>
+    <div class="meta"><span class="tag bed">🛏 טאורמינה 4/4</span><span class="tag">🚗 ~1:30</span><span class="tag">€200–260</span></div></div>
+    <ol class="hours">
+      <li><span class="t">08:15</span><p class="what">קפה, יוצאים. 20 דק' לנקודת המפגש.</p></li>
+      <li><span class="t">09:00</span><p class="what"><b>Body rafting בנקיק האלקנטרה</b>, 1.5–2 שעות. קופצים, שוחים, ומשתמשים בגוף כרפסודה בין הרפידים — בקטע "אגמי אלקנטרה", רחוק מהאזור העמוס.<span class="cost">€39–45/אדם</span><span class="flag star">היילייט</span><span class="note">כולל חליפת נאופרן, גרבי נאופרן, קסדה, אפוד ומדריך — וזה מה שהופך מים של 8–12°C לכיף. ביטול חופשי, בלי תשלום מראש. גיל 12–55.</span>
+        <span class="links"><a href="https://www.youtube.com/results?search_query=Alcantara+gorge+body+rafting+Sicily" target="_blank" rel="noopener">▶ וידאו</a><a href="https://www.google.com/maps/search/Gole+Alcantara" target="_blank" rel="noopener">📍 מפה</a></span></p></li>
+      <li><span class="t">11:30</span><p class="what">מקלחת והתארגנות.</p></li>
+      <li><span class="t">12:30</span><p class="what">צהריים בדרך חזרה או בטאורמינה.<span class="cost">€30–45</span><span class="flag open">פתוח</span></p></li>
+      <li><span class="t">14:30</span><p class="what"><b>רכבל למטה + איזולה בלה</b> — שחייה ושנורקל בשמורה הימית.<span class="cost">€20–30</span><span class="note">חלוקים ולא חול — נעלי מים.</span>
+        <span class="links"><a href="https://www.youtube.com/results?search_query=Isola+Bella+Taormina+snorkeling" target="_blank" rel="noopener">▶ וידאו</a></span></p></li>
+      <li><span class="t">18:30</span><p class="what"><b>קסטלמולה</b> — 20 דק' למעלה, מעל טאורמינה עצמה. יין שקדים בבר <b>Turrisi</b>, ונוף כפול: הים מצד אחד ואתנה מהשני.<span class="cost">€20–30</span>
+        <span class="links"><a href="https://www.youtube.com/results?search_query=Castelmola+Sicily+Bar+Turrisi+almond+wine" target="_blank" rel="noopener">▶ וידאו</a></span></p></li>
+      <li><span class="t">19:23</span><p class="what"><b>השקיעה מקסטלמולה</b> — הנקודה הגבוהה באזור.<span class="cost">חינם</span></p></li>
+      <li><span class="t">21:00</span><p class="what"><b>ארוחת ערב אחרונה</b> בעיר העתיקה.<span class="cost">€60–80</span><span class="flag open">פתוח</span></p></li>
+    </ol>
+    <div class="dfoot"><p><b>מה השתנה:</b> במקום אורטיג'ה, שדרשה 3 שעות נהיגה ביום השביעי. במקומה — אטרקציית מים, חוף, ושקיעה מהנקודה הגבוהה באזור, עם שעה וחצי נהיגה בסך הכל.</p></div>
+  </article>
+
+  <!-- D8 -->
+  <article class="day go">
+    <div class="dhead"><p class="dnum">יום 8 · שבת 12 בספטמבר</p><h3>מונרעאלה בדרך לטיסה</h3>
+    <div class="meta"><span class="tag">🚗 3:00 + 0:45</span><span class="tag">€60–80</span></div></div>
+    <ol class="hours">
+      <li><span class="t">07:00</span><p class="what">קפה, אורזים, צ'ק־אאוט.<span class="note">בלי ארוחת בוקר גדולה — אוכלים טוב יותר במונרעאלה.</span></p></li>
+      <li><span class="t">07:30</span><p class="what">A18 → A19, כמעט הכל אוטוסטרדה.<span class="cost">~€18 אגרה + €30 דלק</span></p></li>
+      <li><span class="t">10:30</span><p class="what"><b>מונרעאלה — הקתדרלה והצלב־מנזר.</b> 6,000 מ"ר פסיפסים ביזנטיים, וחצר עם 228 עמודים מזווגים שאין שניים מהם זהים. נוף על מפרץ פלרמו.<span class="cost">€9–16</span><span class="note">מגיעים לפני הקבוצות. הצלב־מנזר פתוח ב'–ש' 09:00–19:00.</span>
+        <span class="links"><a href="https://www.youtube.com/results?search_query=Monreale+Cathedral+cloister+mosaics+4K" target="_blank" rel="noopener">▶ וידאו</a><a href="https://www.google.com/maps/search/Duomo+di+Monreale" target="_blank" rel="noopener">📍 מפה</a></span></p></li>
+      <li><span class="t">12:30</span><p class="what"><b>הצהריים האמיתי האחרון</b> — נוף על המפרץ, לא אוכל שדה תעופה.<span class="cost">€35–50</span><span class="flag open">פתוח</span></p></li>
+      <li><span class="t">13:35</span><p class="what">45 דק' לשדה, עם עצירת דלק לפני ההחזרה.<span class="cost">€15</span></p></li>
+      <li><span class="t">14:00</span><p class="what">החזרת הרכב.<span class="note">לצלם את כל הרכב ואת מחוון הדלק.</span></p></li>
+      <li><span class="t">14:20</span><p class="what"><b>דלפק המזוודות</b> — נפתח בדיוק 14:25, נסגר 15:45.</p></li>
+      <li><span class="t">16:25</span><p class="what"><b>המראה.</b> נחיתה בתל אביב 20:40.</p></li>
+    </ol>
+    <div class="dfoot">
+      <p><b>למה זה לא לחוץ:</b> דלפק Wizz נפתח רק שעתיים לפני ונסגר 40 דק' לפני — החלון הוא 14:25–15:45. להגיע ב-13:00 זה פשוט לחכות.</p>
+      <p><b>דלת יציאה:</b> ב-11:00 אתם ממילא 45 דק' מהשדה. אם משהו התעכב — מדלגים על מונרעאלה ונוסעים ישר.</p>
+    </div>
+  </article>
+</section>
+
+<!-- BUDGET -->
+<section id="budget">
+  <h2 class="sec">התקציב</h2>
+  <p class="lede">€1 ≈ ₪4.0 · הכל לשניים · הטיסה (€370) כבר שולמה ולא נספרת. <strong>היעד: ₪13,790.</strong></p>
+
+  <h3 style="font-size:1.2rem;margin:0 0 .7rem">ההוצאה הקבועה — בלי לינה</h3>
+  <div class="scroll"><table>
+    <thead><tr><th>קטגוריה</th><th>חסכוני</th><th>ריאלי</th><th>מפנק</th></tr></thead>
+    <tbody>
+      <tr><td>🚗 רכב (השכרה, דלק, אגרות, חניה)</td><td class="n">€500</td><td class="n">€540</td><td class="n">€580</td></tr>
+      <tr><td>🚕 תחבורה (מונית משדה, מונדלו, רכבל)</td><td class="n">€95</td><td class="n">€108</td><td class="n">€120</td></tr>
+      <tr><td>🎟️ אטרקציות</td><td class="n">€440</td><td class="n">€470</td><td class="n">€500</td></tr>
+      <tr><td>🍝 אוכל ושתייה</td><td class="n">€880</td><td class="n">€1,065</td><td class="n">€1,250</td></tr>
+      <tr><td>🛍️ שונות</td><td class="n">€100</td><td class="n">€175</td><td class="n">€250</td></tr>
+      <tr class="hi"><td>סה"כ</td><td class="n">€2,015</td><td class="n">€2,358</td><td class="n">€2,700</td></tr>
+      <tr class="hi"><td>בשקלים</td><td class="n">₪8,060</td><td class="n">₪9,430</td><td class="n">₪10,800</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="call">
+    <h3>שלושה דברים ששווה לדעת</h3>
+    <ul>
+      <li><b>אתנה + הסירה + הרפטינג = €332 — 70% מכל האטרקציות.</b> שאר האטרקציות ביחד הן €140. זו נקודת הכיוונון היחידה שבאמת מזיזה מספרים.</li>
+      <li><b>🅿️ חניה בטאורמינה: €75–125 שכולם שוכחים.</b> 5 ימים × €15–25. <b>חלק מהמלונות בעיר העתיקה כוללים חניה — זה שווה €100 ומשנה איזו הצעה באמת זולה יותר.</b></li>
+      <li><b>נהג נוסף ברכב: €0–35, עוד לא אומת.</b> שניכם נוהגים, זה לא אופציונלי.</li>
+    </ul>
+  </div>
+
+  <h3 style="font-size:1.2rem;margin:2rem 0 .7rem">טירי לינה — 7 לילות, 3 מקומות</h3>
+  <p class="lede">טאורמינה = 57% מהלילות ו-65% מהעלות. שם ההחלטה האמיתית.</p>
+  <div class="scroll"><table>
+    <thead><tr><th>טיר</th><th>פלרמו</th><th>צ'פאלו</th><th>טאורמינה</th><th>7 לילות</th><th>מה מקבלים</th></tr></thead>
+    <tbody>
+      <tr><td>1 · חסכוני</td><td class="n">€70</td><td class="n">€80</td><td class="n">€110</td><td class="n">€660</td><td>נקי, בלי נוף</td></tr>
+      <tr><td>2 · בסיס טוב</td><td class="n">€90</td><td class="n">€100</td><td class="n">€140</td><td class="n">€840</td><td>בעיר העתיקה, מרכזי</td></tr>
+      <tr><td>3 · נוח</td><td class="n">€110</td><td class="n">€120</td><td class="n">€180</td><td class="n">€1,060</td><td>חדר יפה, סיכוי למרפסת</td></tr>
+      <tr class="hi"><td>4 · נוח מאוד ⭐</td><td class="n">€140</td><td class="n">€150</td><td class="n">€230</td><td class="n">€1,350</td><td>נוף לים או לאתנה</td></tr>
+      <tr><td>5 · מפנק</td><td class="n">€180</td><td class="n">€190</td><td class="n">€300</td><td class="n">€1,750</td><td>בוטיק, נוף + בריכה</td></tr>
+      <tr><td>6 · לוקסוס</td><td class="n">€250</td><td class="n">€250</td><td class="n">€420</td><td class="n">€2,430</td><td>ליגת Belmond</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="call sea">
+    <h3>🎯 התוכנית הסופית — ₪13,790</h3>
+    <p style="margin:0 0 .7rem">טיר 4 כמו שהוא = ₪14,830, שמשאיר ₪170 מתחת לתקרה. זה לא באפר. אז: <b>משאירים את טאורמינה על €230, ומקצצים בכל השאר.</b></p>
+    <ul>
+      <li><b>פלרמו €140 → €95/לילה</b> — 2 לילות שבהם חוזרים ב-23:30 מווצ'ריה. משלמים על מיטה, לא על חוויה. <b>חוסך €90</b></li>
+      <li><b>צ'פאלו €150 → €105</b> — לילה אחד, חוזרים ב-23:00. <b>חוסך €45</b></li>
+      <li><b>Belmond Timeo נמחק</b> — בארבעה ימים יש כבר San Domenico ו-Sky Rooftop. שלושה משקאות יוקרה עם נוף מתחילים להיטשטש, ו-Belmond הוא היחיד בלי סיפור. <b>חוסך €40</b></li>
+      <li><b>שונות €175 → €110</b> · <b>Sky Rooftop €70 ולא €100</b> — <b>חוסך €85</b></li>
+    </ul>
+    <p style="margin:.8rem 0 0"><b>סה"כ נחסך: €260 (₪1,040). באפר של ₪1,210 מתחת לתקרה — וטאורמינה לא זזה.</b></p>
+  </div>
+
+  <div class="call lava">
+    <h3>🛡️ מה לא נוגעים בו</h3>
+    <ul>
+      <li><b>אתנה €164 מלא</b> — רכבל בלבד חוסך €56. לא שווה.</li>
+      <li><b>הסירה €90 · הרפטינג €78–90 · San Domenico</b> — אלה הרגעים.</li>
+      <li><b>רכב עם Zero Deductible</b> — דגם זול חוסך €48, אבל אז מקדימים ₪7,675 אם יש שריטה ותובעים אחר כך. לא שווה €48.</li>
+    </ul>
+  </div>
+
+  <div class="call">
+    <h3>🎛️ הכלי שמחזיק בתקציב</h3>
+    <p style="margin:0 0 .5rem">האוכל הוא €1,065 — הקו הכי גדול והכי רך. הוא לא החלטה אחת, הוא 20 קטנות.</p>
+    <p style="margin:0"><b>תקציב יומי: €140.</b> יום רגיל — גרניטה €12 · צהריים €35 · ערב €65 · שתייה €25 = <b>€137</b>. ב-€180 ליום חורגים ב-₪1,000.</p>
+  </div>
+</section>
+
+<!-- CALCULATOR -->
+<section id="calc">
+  <h2 class="sec">מחשבון — כמה ללילה בכל מקום</h2>
+  <p class="lede">הזיזו את המחיר לכל עיר בנפרד וראו את הסכום הסופי. ההוצאה הקבועה מוגדרת על הריאלי (€2,358) פחות הקיצוצים.</p>
+  <div class="calc">
+    <div class="row">
+      <label for="pa">🏛️ פלרמו — 2 לילות<span class="sub">אתם בחדר רק לישון. חוזרים 23:30.</span></label>
+      <output id="paOut">€95</output>
+      <input type="range" id="pa" min="60" max="260" step="5" value="95">
+    </div>
+    <div class="row">
+      <label for="ce">🏖️ צ'פאלו — לילה אחד<span class="sub">לילה בודד. חוזרים 23:00 מ-Le Petit Tonneau.</span></label>
+      <output id="ceOut">€105</output>
+      <input type="range" id="ce" min="60" max="260" step="5" value="105">
+    </div>
+    <div class="row">
+      <label for="ta">🌋 טאורמינה — 4 לילות<span class="sub">כאן ההחלטה. 4 לילות באותה מיטה, והמקום היחיד ששווה לשלם בו על נוף.</span></label>
+      <output id="taOut">€230</output>
+      <input type="range" id="ta" min="80" max="450" step="10" value="230">
+    </div>
+    <div class="row">
+      <label for="fx">💶 הוצאה קבועה (בלי לינה)<span class="sub">חסכוני €2,015 · <b>ריאלי אחרי הקיצוצים €2,233</b> · ריאלי מלא €2,358 · מפנק €2,700</span></label>
+      <output id="fxOut">€2,233</output>
+      <input type="range" id="fx" min="1900" max="2700" step="1" value="2233">
+    </div>
+    <div class="total">
+      <div>
+        <span class="lbl">סה"כ הטיול</span>
+        <div class="verdict" id="verdict"></div>
+      </div>
+      <span class="amt" id="amt">₪0</span>
+    </div>
+    <p style="font-size:.85rem;color:var(--muted);margin:.9rem 0 0">לינה: <span id="bed"></span> · בלי הטיסה ששולמה (₪1,250) · תקרה ₪15,000</p>
+  </div>
+</section>
+
+<!-- BOOKINGS -->
+<section id="book">
+  <h2 class="sec">מה צריך להזמין</h2>
+  <p class="lede">לפי דחיפות אמיתית. הלינה נגמרת במלאי, לא במחיר.</p>
+  <div class="call">
+    <h3>🔴 דחוף — השבוע</h3>
+    <ul>
+      <li><b>🛏️ טאורמינה 8–12.9 (4 לילות) · €230/לילה.</b> בתוך העיר העתיקה, בטווח הליכה מקורסו אומברטו. <b>לבדוק אם חניה כלולה — זה שווה €100.</b></li>
+      <li><b>🚗 רכב — עד ~27.8.</b> אוטומט · <b>איסוף מרכז פלרמו 7.9</b> (לא בשדה) · החזרה בשדה 12.9 · על שם קארין · Zero Deductible · ביטול חופשי. <b>לאמת: עלות נהג נוסף, ושהדלפק בעיר פתוח בשני.</b></li>
+      <li><b>🛏️ פלרמו 5–7.9 · €95/לילה</b> — חובה קוד כניסה עצמי או קבלה 24/7 (צ'ק־אין 01:15).</li>
+      <li><b>🛏️ צ'פאלו 7–8.9 · €105</b> — לברר חניה מהמאחסן מראש (ZTL).</li>
+    </ul>
+  </div>
+  <div class="call sea">
+    <h3>🟢 קל — ביטול חופשי, אפשר להזמין בלי סיכון</h3>
+    <ul>
+      <li>🌋 <b>אתנה</b> — רכבל + ג'יפ + מדריך, €82/אדם</li>
+      <li>⛵ <b>סירת שקיעה טאורמינה</b> — €90, מקס 12 אנשים, ביטול 24ש'</li>
+      <li>🌊 <b>Body rafting אלקנטרה</b> — €39–45/אדם, בלי תשלום מראש</li>
+      <li>🎫 <b>קפלה פלטינה</b> (7.9) · <b>מונרעאלה</b> (12.9)</li>
+    </ul>
+  </div>
+  <div class="call lava">
+    <h3>☎️ טלפונים — 5 דקות כל אחד</h3>
+    <ul>
+      <li><b>Four Seasons San Domenico</b> · +39 0942 613 254 — קוקטייל 8.9, ולוודא כניסה ללא אורחות</li>
+      <li><b>Le Petit Tonneau</b> · +39 0921 421447 — <b>לוודא במפורש "in terrazza"</b></li>
+      <li><b>Il Locale</b>, צ'פאלו — לוודא שיש צהריים בכלל</li>
+      <li><b>Pirandello 2.0</b> (8.9) · <b>Sky Rooftop</b> (10.9)</li>
+    </ul>
+  </div>
+  <div class="call">
+    <h3>✅ כבר סגור</h3>
+    <ul>
+      <li><b>טיסות</b> — €370 לשניים, שולם</li>
+      <li><b>Le Petit Tonneau</b> — 7.9 בשעה 20:00, €30 שולם</li>
+      <li><b>רישיון בינלאומי</b> — לשניכם</li>
+    </ul>
+  </div>
+</section>
+
+<!-- INTEL -->
+<section id="intel">
+  <h2 class="sec">מה שחייבים לדעת על סיציליה</h2>
+  <p class="lede">כל זה יצא ממחקר של 3,047 פוסטים ברדיט, עשרה טרנסקריפטים ביוטיוב, ומפות של עומר ונדב.</p>
+
+  <details open><summary>🚗 נהיגה, ZTL וקנסות</summary>
+    <ul>
+      <li><b>ZTL = אזור מוגבל לתנועה, נאכף במצלמות.</b> כל המרכז ההיסטורי של פלרמו, צ'פאלו וטאורמינה. <b>קנס €164 שמגיע חודשים אחר כך.</b></li>
+      <li><b>הכלל: מנווטים תמיד לחניון, אף פעם לא לכתובת הלינה.</b></li>
+      <li>רוב הזמן אתם על אוטוסטרדות ודרכים משניות — <b>"לא מטורפים כמו רחובות העיר"</b>.</li>
+      <li><b>לצלם וידאו של הרכב ושל מחוון הדלק</b> באיסוף ובהחזרה. זו התרמית הנפוצה ביותר.</li>
+      <li>🔴 <b>אלכוהול:</b> משטרה עושה בדיקות נשיפה בלילה. קנסות עד €5,000 ושלילה. <b>זו הסיבה שישנים בעיר העתיקה.</b></li>
+    </ul>
+  </details>
+
+  <details><summary>🍽️ אוכל — הכללים שמשנים הכל</summary>
+    <ul>
+      <li><b>הכל נסגר 14:00–19:00.</b> אין ארוחת ערב לפני 20:00. זה מה שמאפשר את המנוחה באמצע היום.</li>
+      <li><b>4.2 בגוגל עם 1,000+ ביקורות = מעולה.</b> הסיציליאנים מדרגים בקושי. אם תחפשו רק 4.7+ תפספסו את הטוב.</li>
+      <li><b>האוכל הטוב באמת הוא בטרטוריות של €5–15 למנה</b>, לא במסעדות היוקרה.</li>
+      <li><b>Coperto</b> — €2–3 לאדם בכל חשבון. נורמלי, לא טעות.</li>
+      <li><b>גרניטה עם בריוש</b> היא ארוחת הבוקר. טובלים.</li>
+    </ul>
+  </details>
+
+  <details><summary>🎒 בטיחות ודברים קטנים</summary>
+    <ul>
+      <li><b>ווצ'ריה בפלרמו — בירת הכייסים.</b> ארנק בכיס קדמי.</li>
+      <li>מונית משדה התעופה — <b>רק מהדלפק הרשמי, מחיר קבוע.</b></li>
+      <li><b>מזומן</b> — הרבה מקומות קטנים לא מקבלים כרטיס.</li>
+      <li>שקיעה בספטמבר: <b>19:23</b>. חושך מלא רק סביב 20:15.</li>
+    </ul>
+  </details>
+</section>
+
+<!-- PACK -->
+<section id="pack">
+  <h2 class="sec">מה לארוז</h2>
+  <div class="call">
+    <h3>הדברים שאם תשכחו — תפסידו משהו</h3>
+    <ul>
+      <li>👟 <b>נעלי מים</b> — איזולה בלה חלוקים, לא חול. גם לאלקנטרה.</li>
+      <li>🧥 <b>סוודר + נעליים סגורות לאתנה</b> — קר ב-2,500 מ' גם בספטמבר.</li>
+      <li>👔 <b>חולצה מכופתרת / מכנסיים ארוכים</b> — San Domenico ו-Sky Rooftop. לא שורט.</li>
+      <li>🩱 <b>בגד ים מתחת לבגדים</b> ביום הרפטינג.</li>
+      <li>💵 <b>מזומן</b> · 🪪 <b>רישיון פיזי + בינלאומי + PDF של כרטיס החזור</b> (משכירי רכב מבקשים).</li>
+      <li>🔌 מתאם · קרם הגנה · כובע.</li>
+    </ul>
+  </div>
+</section>
+
+<footer class="end">
+  <p>נבנה מתוך מחקר של 3,047 פוסטים ותגובות ברדיט, עשרה טרנסקריפטים ביוטיוב, ומפות Google Maps של עומר ונדב. כל המחירים נבדקו חי באוגוסט 2026.</p>
+  <p>עודכן 25 באוגוסט 2026.</p>
+</footer>
+
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+(function(){
+  var PA=[38.1157,13.3615],CE=[38.0397,14.0228],TA=[37.8516,15.2853],
+      ET=[37.6997,14.9992],AL=[37.8756,15.1697],MO=[38.0817,13.2919],PMO=[38.1810,13.0999];
+  var map=L.map('map',{scrollWheelZoom:false});
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',
+    {attribution:'&copy; OpenStreetMap, &copy; CARTO',maxZoom:19}).addTo(map);
+
+  function bed(ll,name,nights,color){
+    L.circleMarker(ll,{radius:10,color:'#fff',weight:2,fillColor:color,fillOpacity:1})
+      .addTo(map).bindPopup('<b>'+name+'</b><br>'+nights);
+  }
+  function spot(ll,name){
+    L.circleMarker(ll,{radius:5,color:'#fff',weight:1.5,fillColor:'#8b3a2b',fillOpacity:.9})
+      .addTo(map).bindPopup(name);
+  }
+  bed(PA,'פלרמו','לילות 1–2','#2f6f83');
+  bed(CE,'צְפאלו','לילה 3','#a8791a');
+  bed(TA,'טאורמינה','לילות 4–7','#5f6b4a');
+  spot(ET,'הר אתנה · יום 5');
+  spot(AL,'נקיק האלקנטרה · יום 7');
+  spot(MO,'מונרעאלה · יום 8');
+  spot(PMO,'שדה התעופה');
+
+  L.polyline([PMO,PA,CE,TA],{color:'#2f6f83',weight:3,opacity:.5,dashArray:'7 6'}).addTo(map);
+  L.polyline([TA,ET],{color:'#8b3a2b',weight:2,opacity:.4,dashArray:'4 5'}).addTo(map);
+  L.polyline([TA,AL],{color:'#8b3a2b',weight:2,opacity:.4,dashArray:'4 5'}).addTo(map);
+  L.polyline([TA,MO,PMO],{color:'#5f6b4a',weight:2.5,opacity:.45,dashArray:'7 6'}).addTo(map);
+
+  var b=L.latLngBounds([PA,CE,TA,ET,AL,MO,PMO]);
+  function fit(){map.invalidateSize(false);map.fitBounds(b,{padding:[40,40]});}
+  fit();requestAnimationFrame(fit);setTimeout(fit,250);
+  window.addEventListener('load',fit);
+
+  // calculator
+  var FX=4.0,CAP=15000;
+  var els={pa:0,ce:0,ta:0,fx:0};
+  function upd(){
+    var pa=+document.getElementById('pa').value,
+        ce=+document.getElementById('ce').value,
+        ta=+document.getElementById('ta').value,
+        fx=+document.getElementById('fx').value;
+    document.getElementById('paOut').textContent='€'+pa;
+    document.getElementById('ceOut').textContent='€'+ce;
+    document.getElementById('taOut').textContent='€'+ta;
+    document.getElementById('fxOut').textContent='€'+fx.toLocaleString();
+    var lodg=pa*2+ce+ta*4, total=lodg+fx, ils=Math.round(total*FX);
+    document.getElementById('amt').textContent='₪'+ils.toLocaleString();
+    document.getElementById('bed').textContent='€'+lodg.toLocaleString()+' ל-7 לילות';
+    var v=document.getElementById('verdict'), diff=CAP-ils;
+    if(diff>=0){v.className='verdict ok';v.textContent='✓ ₪'+diff.toLocaleString()+' מתחת לתקרה';}
+    else{v.className='verdict over';v.textContent='⚠ ₪'+Math.abs(diff).toLocaleString()+' מעל התקרה';}
+  }
+  ['pa','ce','ta','fx'].forEach(function(id){
+    document.getElementById(id).addEventListener('input',upd);
+  });
+  upd();
+})();
+</script>
+</body>
+</html>
