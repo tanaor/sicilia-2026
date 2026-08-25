@@ -99,6 +99,13 @@ ol.hours>li+li{border-top:1px solid var(--hair)}
 .links a{display:inline-block;font-size:.78rem;font-weight:600;text-decoration:none;
   padding:.15rem .55rem;border:1px solid var(--hair);border-radius:.35rem;background:var(--paper);color:var(--sea)}
 .links a:hover{background:var(--sea-soft)}
+  .links a[href*="maps/dir"]{border-color:var(--sea);color:var(--sea);font-weight:700}
+  .links a[href*="maps/dir"]:hover{background:var(--sea);color:var(--card)}
+  .navgrid{display:grid;gap:.6rem;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));margin:0}
+  .navgrid a{display:block;text-decoration:none;padding:.7rem .9rem;border:1px solid var(--hair);
+    border-radius:.5rem;background:var(--paper);color:var(--ink);font-weight:600;font-size:.93rem}
+  .navgrid a:hover{border-color:var(--sea);background:var(--sea-soft)}
+  .navgrid a span{display:block;font-size:.78rem;color:var(--muted);font-weight:400;margin-top:.15rem}
 .flag{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.05em;
   padding:.1rem .45rem;border-radius:.3rem;vertical-align:.1em;margin-inline-start:.4rem}
 .flag.open{background:var(--sun-soft);color:var(--sun)}
@@ -160,7 +167,7 @@ footer.end{margin-top:4rem;padding-top:1.5rem;border-top:1px solid var(--hair);c
     <div class="fact"><dt>סה"כ צפוי</dt><dd>₪12,663</dd></div>
   </dl>
   <nav class="top" aria-label="ניווט">
-    <a href="#map-sec">המפה</a><a href="#days">המסלול</a><a href="#budget">תקציב</a>
+    <a href="#map-sec">המפה</a><a href="#nav">ניווט</a><a href="#days">המסלול</a><a href="#budget">תקציב</a>
     <a href="#calc">מחשבון</a><a href="#book">מה סגור</a><a href="#intel">מה חשוב לדעת</a><a href="#pack">ציוד</a>
   </nav>
 </header>
@@ -176,6 +183,45 @@ footer.end{margin-top:4rem;padding-top:1.5rem;border-top:1px solid var(--hair);c
   </div>
 </section>
 
+<section id="nav">
+  <h2 class="sec">ניווט — הכל בלחיצה</h2>
+  <p class="lede">כל מקום במסלול נושא כפתור <b>🧭 נווט</b>. הוא פותח את Google Maps <strong>עם ניווט מהמקום שאתם נמצאים בו</strong>, כולל זמן הגעה בזמן אמת — לא סתם סימון על מפה.</p>
+
+  <h3 style="font-size:1.15rem;margin:0 0 .8rem">🚗 הנסיעות הגדולות</h3>
+  <div class="navgrid">
+      <a href="https://www.google.com/maps/dir/?api=1&destination=Via%20di%20Lampedusa%2023%2C%2090133%20Palermo&travelmode=driving" target="_blank" rel="noopener">✈️ שדה פלרמו → One<span>5.9 · מונית ~50 דק'</span></a>
+      <a href="https://www.google.com/maps/dir/?api=1&destination=Via%20Antonio%20Gramsci%2045%2C%2090015%20Cefalu&travelmode=driving" target="_blank" rel="noopener">🏖️ פלרמו → צ'פאלו<span>7.9 · 1:05 · 70 ק"מ</span></a>
+      <a href="https://www.google.com/maps/dir/?api=1&destination=Via%20Bagnoli%20Croci%2092%2C%2098039%20Taormina&travelmode=driving" target="_blank" rel="noopener">🌋 צ'פאלו → טאורמינה<span>8.9 · 2:10 · A20</span></a>
+      <a href="https://www.google.com/maps/dir/?api=1&destination=Rifugio%20Sapienza%2C%20Etna&travelmode=driving" target="_blank" rel="noopener">🌋 טאורמינה → אתנה<span>9.9 · 1:30</span></a>
+      <a href="https://www.google.com/maps/dir/?api=1&destination=Cantina%20Firriato%20Cavanera%20Etnea%2C%20Castiglione%20di%20Sicilia&travelmode=driving" target="_blank" rel="noopener">🍷 אתנה → יקב צפוני<span>9.9</span></a>
+      <a href="https://www.google.com/maps/dir/?api=1&destination=Gole%20Alcantara&travelmode=driving" target="_blank" rel="noopener">🌊 טאורמינה → אלקנטרה<span>11.9 · 20 דק'</span></a>
+      <a href="https://www.google.com/maps/dir/?api=1&destination=Bar%20Turrisi%2C%20Castelmola&travelmode=driving" target="_blank" rel="noopener">🍷 טאורמינה → קסטלמולה<span>11.9 · 20 דק'</span></a>
+      <a href="https://www.google.com/maps/dir/?api=1&destination=Duomo%20di%20Monreale&travelmode=driving" target="_blank" rel="noopener">⛪ טאורמינה → מונרעאלה<span>12.9 · 3:00 · A18→A19</span></a>
+      <a href="https://www.google.com/maps/dir/?api=1&destination=Palermo%20Falcone%20Borsellino%20Airport&travelmode=driving" target="_blank" rel="noopener">✈️ מונרעאלה → שדה<span>12.9 · 45 דק'</span></a>
+      <a href="https://www.google.com/maps/dir/?api=1&destination=Parcheggio%20Lumbi%2C%20Taormina&travelmode=driving" target="_blank" rel="noopener">🅿️ חניון Lumbi, טאורמינה<span>גיבוי לחניה</span></a>
+      <a href="https://www.google.com/maps/dir/?api=1&destination=Parcheggio%20Lungomare%20Giuseppe%20Giardina%2C%20Cefalu&travelmode=driving" target="_blank" rel="noopener">🅿️ Lungomare Giardina, צ'פאלו<span>540 מקומות, מחוץ ל-ZTL</span></a>
+  </div>
+
+  <div class="call" style="margin-top:1.5rem">
+    <h3>🗺️ המפות האישיות שלנו</h3>
+    <p style="margin:0 0 .6rem">בנינו מפת My Maps עם <b>87 מקומות</b> בסיציליה — מחולקת לקטגוריות בצבעים, עם תיאור בעברית והמקור של כל המלצה.</p>
+    <ul>
+      <li>⬜ <b>הלינק למפה של גל</b> — צריך להדביק כאן</li>
+      <li>⬜ <b>הלינק למפה של קארין</b> — צריך להדביק כאן</li>
+      <li><a href="https://www.google.com/maps/d/" target="_blank" rel="noopener">Google My Maps</a> → פותחים את המפה → <b>Share</b> → מעתיקים את הלינק</li>
+    </ul>
+    <p style="margin:.7rem 0 0;font-size:.9rem;color:var(--muted)">טיפ: פתחו את המפה באפליקציית Google Maps בטלפון פעם אחת לפני הטיסה — <b>Saved → Maps</b> — ואז היא זמינה גם בלי אינטרנט טוב.</p>
+  </div>
+
+  <div class="call lava" style="margin-top:1rem">
+    <h3>🔴 שני דברים לפני שנוסעים</h3>
+    <ul>
+      <li><b>ZTL.</b> המרכז ההיסטורי של פלרמו, צ'פאלו וטאורמינה סגור לתנועה ונאכף במצלמות — <b>קנס €164 שמגיע חודשים אחר כך.</b> הכלל: מנווטים <b>לחניון</b>, אף פעם לא לכתובת הלינה.</li>
+      <li><b>מורידים מפות אופליין.</b> בגוגל מפס: חיפוש "Sicilia" → התפריט → Offline maps → הורדה. הקליטה בהר ובנקיק חלשה.</li>
+    </ul>
+  </div>
+</section>
+
 <section id="days">
   <h2 class="sec">המסלול, יום אחרי יום</h2>
   <p class="lede">הפס בצד ימין הוא צבע המיטה של אותו לילה. <span class="flag open">פתוח</span> = עוד לא הוזמן · <span class="flag done">סגור</span> = מוזמן · <span class="flag star">היילייט</span> = מה שלא מוותרים עליו.</p>
@@ -186,8 +232,8 @@ footer.end{margin-top:4rem;padding-top:1.5rem;border-top:1px solid var(--hair);c
     <div class="meta"><span class="tag bed">🛏 One · פלרמו 1/2</span><span class="tag">בלי רכב</span><span class="tag">✅ מוזמן</span></div></div>
     <ol class="hours">
       <li><span class="t">23:55</span><p class="what">נחיתה. יציאה עם מזוודה סביב 00:20.</p></li>
-      <li><span class="t">00:30</span><p class="what"><b>מונית במחיר קבוע לעיר</b>, ~50 דקות.<span class="cost">€45–50 לרכב, לא לאדם</span><span class="note">רק מהדלפק הרשמי. לא ללכת עם מי שתופס אתכם באולם.</span></p></li>
-      <li><span class="t">01:15</span><p class="what">צ'ק־אין.<span class="note">חובה לוודא מראש קוד כניסה עצמי או קבלה 24/7.</span></p></li>
+      <li><span class="t">00:30</span><p class="what"><b>מונית במחיר קבוע לעיר</b>, ~50 דקות.<span class="cost">€45–50 לרכב, לא לאדם</span><span class="note">רק מהדלפק הרשמי. לא ללכת עם מי שתופס אתכם באולם.</span><span class="links"><a href="https://www.google.com/maps/dir/?api=1&destination=One%20Via%20di%20Lampedusa%2023%20Palermo&travelmode=driving" target="_blank" rel="noopener">🧭 ניווט לנהג</a></span></p></li>
+      <li><span class="t">01:15</span><p class="what">צ'ק־אין ב-<b>One</b>, Via di Lampedusa 23.<span class="cost">₪1,556 ל-2 לילות · 9.5 (446 ביקורות)</span><span class="note">הצ'ק־אין שם פתוח מ-12:00 בלי שעת סגירה, אז 01:15 בסדר. שעות שקט בבניין 23:00–08:00.</span><span class="links"><a href="https://www.google.com/maps/dir/?api=1&destination=Via%20di%20Lampedusa%2023%2C%2090133%20Palermo&travelmode=driving" target="_blank" rel="noopener">🧭 כתובת לנהג</a></span></p></li>
     </ol>
   </article>
 
@@ -198,20 +244,20 @@ footer.end{margin-top:4rem;padding-top:1.5rem;border-top:1px solid var(--hair);c
     <ol class="hours">
       <li><span class="t">09:00</span><p class="what"><b>גרניטה ובריוש</b> — טובלים את הבריוש בגרניטה.<span class="cost">€10–14</span><span class="src">3 טרנסקריפטים</span></p></li>
       <li><span class="t">09:45</span><p class="what"><b>שוק קאפו</b> — הרגוע מבין השניים. דג חרב, סרדינים ממולאים, ארנצ'יני, פנלה.<span class="cost">€15–25</span><span class="note">סוגר 13:00. ביום ראשון השווקים בבוקר בלבד — אבל גם רגועים ואינטימיים יותר.</span>
-        <span class="links"><a href="https://www.youtube.com/results?search_query=Capo+Market+Palermo+street+food" target="_blank" rel="noopener">▶ וידאו</a><a href="https://www.google.com/maps/search/Mercato+del+Capo+Palermo" target="_blank" rel="noopener">📍 מפה</a></span></p></li>
+        <span class="links"><a href="https://www.google.com/maps/dir/?api=1&destination=Mercato%20del%20Capo%2C%20Palermo&travelmode=walking" target="_blank" rel="noopener">🧭 נווט</a><a href="https://www.youtube.com/results?search_query=Capo+Market+Palermo+street+food" target="_blank" rel="noopener">▶ וידאו</a><a href="https://www.google.com/maps/search/Mercato+del+Capo+Palermo" target="_blank" rel="noopener">📍 מפה</a></span></p></li>
       <li><span class="t">11:15</span><p class="what"><b>קוואטרו קאנטי</b> — הצומת הברוקי עם ארבע חזיתות, אחת לכל עונה. וכיכר פרטוריה.<span class="cost">חינם</span>
-        <span class="links"><a href="https://www.youtube.com/results?search_query=Quattro+Canti+Palermo" target="_blank" rel="noopener">▶ וידאו</a><a href="https://www.google.com/maps/search/Quattro+Canti+Palermo" target="_blank" rel="noopener">📍 מפה</a></span></p></li>
+        <span class="links"><a href="https://www.google.com/maps/dir/?api=1&destination=Quattro%20Canti%2C%20Palermo&travelmode=walking" target="_blank" rel="noopener">🧭 נווט</a><a href="https://www.youtube.com/results?search_query=Quattro+Canti+Palermo" target="_blank" rel="noopener">▶ וידאו</a><a href="https://www.google.com/maps/search/Quattro+Canti+Palermo" target="_blank" rel="noopener">📍 מפה</a></span></p></li>
       <li><span class="t">12:00</span><p class="what"><b>גג קתדרלת פלרמו</b> — לא נכנסים, עולים על הגג. נוף על העיר, ההרים והים.<span class="cost">€7/אדם</span><span class="src">היילייט של 2 מקורות שונים</span>
-        <span class="links"><a href="https://www.youtube.com/results?search_query=Palermo+Cathedral+rooftop+view" target="_blank" rel="noopener">▶ וידאו</a><a href="https://www.google.com/maps/search/Cattedrale+di+Palermo" target="_blank" rel="noopener">📍 מפה</a></span></p></li>
+        <span class="links"><a href="https://www.google.com/maps/dir/?api=1&destination=Cattedrale%20di%20Palermo&travelmode=walking" target="_blank" rel="noopener">🧭 נווט</a><a href="https://www.youtube.com/results?search_query=Palermo+Cathedral+rooftop+view" target="_blank" rel="noopener">▶ וידאו</a><a href="https://www.google.com/maps/search/Cattedrale+di+Palermo" target="_blank" rel="noopener">📍 מפה</a></span></p></li>
       <li><span class="t">13:00</span><p class="what">צהריים — אוכל רחוב או טרטוריה.<span class="cost">€25–35</span><span class="flag open">פתוח</span></p></li>
       <li><span class="t">14:00</span><p class="what"><b>מלון — מנוחה ומקלחת.</b> בסיציליה הכל סגור 14:00–19:00, וזה בדיוק מה שמאפשר את הערב.</p></li>
       <li><span class="t">15:45</span><p class="what"><b>אוטובוס למונדלו</b>, 25 דק'. חול לבן, מים טורקיז, מונטה פלגרינו מאחור, ביתן ליברטי על המים.<span class="cost">€25–40</span><span class="note">יום ראשון — כל פלרמו שם. עמוס אבל תוסס.</span>
-        <span class="links"><a href="https://www.youtube.com/results?search_query=Mondello+beach+Palermo" target="_blank" rel="noopener">▶ וידאו</a><a href="https://www.google.com/maps/search/Mondello+Beach" target="_blank" rel="noopener">📍 מפה</a></span></p></li>
+        <span class="links"><a href="https://www.google.com/maps/dir/?api=1&destination=Mondello%20Beach%2C%20Palermo&travelmode=transit" target="_blank" rel="noopener">🧭 נווט</a><a href="https://www.youtube.com/results?search_query=Mondello+beach+Palermo" target="_blank" rel="noopener">▶ וידאו</a><a href="https://www.google.com/maps/search/Mondello+Beach" target="_blank" rel="noopener">📍 מפה</a></span></p></li>
       <li><span class="t">18:30</span><p class="what"><b>אפריטיבו על הים</b> במונדלו.<span class="cost">€20–28</span><span class="flag open">פתוח</span></p></li>
-      <li><span class="t">20:00</span><p class="what">🚕 <b>מונית חזרה, ~€20 — לא אוטובוס.</b><span class="cost">€20</span><span class="note">ראשון + אחרי אפריטיבו + קו 806 עמוס = לא ככה מסיימים ערב טוב.</span></p></li>
+      <li><span class="t">20:00</span><p class="what">🚕 <b>מונית חזרה, ~€20 — לא אוטובוס.</b><span class="cost">€20</span><span class="note">ראשון + אחרי אפריטיבו + קו 806 עמוס = לא ככה מסיימים ערב טוב.</span><span class="links"><a href="https://www.google.com/maps/dir/?api=1&destination=Via%20di%20Lampedusa%2023%2C%2090133%20Palermo&travelmode=driving" target="_blank" rel="noopener">🧭 נווט</a></span></p></li>
       <li><span class="t">21:00</span><p class="what"><b>ארוחת ערב</b> בטרטוריה במרכז — פסטה אלה נורמה, דגים.<span class="cost">€50–65</span><span class="flag open">פתוח</span></p></li>
-      <li><span class="t">22:30</span><p class="what"><b>ווצ'ריה</b> / <b>Dal Barone</b> — שולחנות על הרחוב.<span class="cost">€25–40</span><span class="note">בירת הכייסים. ארנק בכיס קדמי.</span></p></li>
-      <li><span class="t">23:30</span><p class="what">קנולי ב-<b>I Segreti del Chiostro</b>.<span class="cost">€8–12</span><span class="src">מפת נדב</span></p></li>
+      <li><span class="t">22:30</span><p class="what"><b>ווצ'ריה</b> / <b>Dal Barone</b> — שולחנות על הרחוב.<span class="cost">€25–40</span><span class="note">בירת הכייסים. ארנק בכיס קדמי.</span><span class="links"><a href="https://www.google.com/maps/dir/?api=1&destination=Mercato%20della%20Vucciria%2C%20Palermo&travelmode=walking" target="_blank" rel="noopener">🧭 נווט</a></span></p></li>
+      <li><span class="t">23:30</span><p class="what">קנולי ב-<b>I Segreti del Chiostro</b>.<span class="cost">€8–12</span><span class="src">מפת נדב</span><span class="links"><a href="https://www.google.com/maps/dir/?api=1&destination=I%20Segreti%20del%20Chiostro%2C%20Palermo&travelmode=walking" target="_blank" rel="noopener">🧭 נווט</a></span></p></li>
     </ol>
     <div class="dfoot">
       <p><b>הערה כנה:</b> חיי הלילה ביום ראשון חלשים יותר. ווצ'ריה הופכת ל"מסיבת רחוב" בעיקר בשישי־שבת. יהיה נחמד, לא פיצוץ.</p>
@@ -226,18 +272,18 @@ footer.end{margin-top:4rem;padding-top:1.5rem;border-top:1px solid var(--hair);c
     <ol class="hours">
       <li><span class="t">08:30</span><p class="what">גרניטה אחרונה בפלרמו, אורזים.<span class="cost">€10–14</span></p></li>
       <li><span class="t">09:30</span><p class="what"><b>קפלה פלטינה</b> — תקרה ערבית, פסיפסים ביזנטיים ומבנה נורמני, הכל בחדר אחד.<span class="cost">€30–40</span><span class="quote">"אחת הקפלות הכי מרשימות שראיתי. התקרה חד־פעמית."</span><span class="src">רדיט · 2,546 👍</span>
-        <span class="links"><a href="https://www.youtube.com/results?search_query=Cappella+Palatina+Palermo+4K" target="_blank" rel="noopener">▶ וידאו</a><a href="https://www.federicosecondo.org/" target="_blank" rel="noopener">🎫 כרטיסים</a></span></p></li>
-      <li><span class="t">11:15</span><p class="what"><b>איסוף הרכב במרכז פלרמו.</b><span class="note">וידאו של כל שריטה ושל מחוון הדלק לפני שיוצאים.</span></p></li>
-      <li><span class="t">12:00</span><p class="what">כביש החוף לצ'פאלו, שעה וחמש.<span class="cost">~€5 דלק</span></p></li>
-      <li><span class="t">13:15</span><p class="what">צ'ק־אין ב-<b>YEASY smart rooms</b>, 45 Via Antonio Gramsci.<span class="cost">₪542 · חדר 26 מ"ר עם מרפסת · 9.4 (830)</span><span class="note">ZTL — חונים מחוץ למרכז. חניון מאובטח ברחוב הסמוך €15/יום, או חינם ליד בית הקברות מאחורי La Rocca. ☎️ +39 320 072 9936</span></p></li>
-      <li><span class="t">13:45</span><p class="what"><b>Il Locale</b> — פיצה.<span class="cost">€30–40</span><span class="quote">"הפיצה האהובה עלינו בכל סיציליה. אנשים באים לצ'פאלו במיוחד בשבילה."</span><span class="note">לאמת שהם עושים צהריים — הרבה פיצריות איטלקיות פותחות רק בערב.</span></p></li>
+        <span class="links"><a href="https://www.google.com/maps/dir/?api=1&destination=Cappella%20Palatina%2C%20Palermo&travelmode=walking" target="_blank" rel="noopener">🧭 נווט</a><a href="https://www.youtube.com/results?search_query=Cappella+Palatina+Palermo+4K" target="_blank" rel="noopener">▶ וידאו</a><a href="https://www.federicosecondo.org/" target="_blank" rel="noopener">🎫 כרטיסים</a></span></p></li>
+      <li><span class="t">11:15</span><p class="what"><b>איסוף הרכב במרכז פלרמו.</b><span class="note">וידאו של כל שריטה ושל מחוון הדלק לפני שיוצאים.</span><span class="links"><a href="https://www.google.com/maps/dir/?api=1&destination=Palermo%20city%20centre%20car%20rental&travelmode=walking" target="_blank" rel="noopener">🧭 נווט</a></span></p></li>
+      <li><span class="t">12:00</span><p class="what">כביש החוף לצ'פאלו, שעה וחמש.<span class="cost">~€5 דלק</span><span class="links"><a href="https://www.google.com/maps/dir/?api=1&destination=YEASY%20smart%20rooms%2C%20Via%20Antonio%20Gramsci%2045%2C%20Cefalu&travelmode=driving" target="_blank" rel="noopener">🧭 נווט לצ'פאלו</a></span></p></li>
+      <li><span class="t">13:15</span><p class="what">צ'ק־אין ב-<b>YEASY smart rooms</b>, 45 Via Antonio Gramsci.<span class="cost">₪542 · חדר 26 מ"ר עם מרפסת · 9.4 (830)</span><span class="note">ZTL — חונים מחוץ למרכז. חניון מאובטח ברחוב הסמוך €15/יום, או חינם ליד בית הקברות מאחורי La Rocca. ☎️ +39 320 072 9936</span><span class="links"><a href="https://www.google.com/maps/dir/?api=1&destination=Via%20Antonio%20Gramsci%2045%2C%2090015%20Cefalu&travelmode=driving" target="_blank" rel="noopener">🧭 נווט</a></span></p></li>
+      <li><span class="t">13:45</span><p class="what"><b>Il Locale</b> — פיצה.<span class="cost">€30–40</span><span class="quote">"הפיצה האהובה עלינו בכל סיציליה. אנשים באים לצ'פאלו במיוחד בשבילה."</span><span class="note">לאמת שהם עושים צהריים — הרבה פיצריות איטלקיות פותחות רק בערב.</span><span class="links"><a href="https://www.google.com/maps/dir/?api=1&destination=Il%20Locale%2C%20Cefalu&travelmode=walking" target="_blank" rel="noopener">🧭 נווט</a></span></p></li>
       <li><span class="t">15:00</span><p class="what"><b>חוף פורטו וקיו</b> — האור מצד העיר אחה"צ הוא הטוב ביותר.<span class="cost">חינם</span>
-        <span class="links"><a href="https://www.youtube.com/results?search_query=Cefalu+Sicily+beach+old+town" target="_blank" rel="noopener">▶ וידאו</a><a href="https://www.google.com/maps/search/Cefalu+beach" target="_blank" rel="noopener">📍 מפה</a></span></p></li>
-      <li><span class="t">17:00</span><p class="what">סמטאות העיר העתיקה והקתדרלה מ־1131, עם פסיפס הכריסטוס פנטוקרטור.<span class="cost">€5–10</span></p></li>
-      <li><span class="t">18:30</span><p class="what">גלידה ב-<b>Sapore di Sale</b> — טעם "Etna", פיסטוק ודובדבן.<span class="cost">€8–12</span></p></li>
+        <span class="links"><a href="https://www.google.com/maps/dir/?api=1&destination=Spiaggia%20di%20Cefalu%2C%20Porto%20Vecchio&travelmode=walking" target="_blank" rel="noopener">🧭 נווט</a><a href="https://www.youtube.com/results?search_query=Cefalu+Sicily+beach+old+town" target="_blank" rel="noopener">▶ וידאו</a><a href="https://www.google.com/maps/search/Cefalu+beach" target="_blank" rel="noopener">📍 מפה</a></span></p></li>
+      <li><span class="t">17:00</span><p class="what">סמטאות העיר העתיקה והקתדרלה מ־1131, עם פסיפס הכריסטוס פנטוקרטור.<span class="cost">€5–10</span><span class="links"><a href="https://www.google.com/maps/dir/?api=1&destination=Duomo%20di%20Cefalu&travelmode=walking" target="_blank" rel="noopener">🧭 נווט</a></span></p></li>
+      <li><span class="t">18:30</span><p class="what">גלידה ב-<b>Sapore di Sale</b> — טעם "Etna", פיסטוק ודובדבן.<span class="cost">€8–12</span><span class="links"><a href="https://www.google.com/maps/dir/?api=1&destination=Sapore%20di%20Sale%2C%20Cefalu&travelmode=walking" target="_blank" rel="noopener">🧭 נווט</a></span></p></li>
       <li><span class="t">19:24</span><p class="what"><b>השקיעה</b> מהחוף או מהסלעים. בלי לוח זמנים.<span class="cost">חינם</span></p></li>
-      <li><span class="t">20:00</span><p class="what"><b>Le Petit Tonneau — על המרפסת.</b> יין וגבינות מעל הים אחרי השקיעה.<span class="cost">€30 שולם + תוספות</span><span class="flag done">סגור</span><span class="note">להגיע 19:50. לוודא במפורש "in terrazza".</span></p></li>
-      <li><span class="t">21:15</span><p class="what"><b>La cantina del Barone</b> (4.7) או <b>Enoteca La Cave</b> (4.8).<span class="cost">€50–65</span><span class="flag open">פתוח</span><span class="src">מפת נדב</span></p></li>
+      <li><span class="t">20:00</span><p class="what"><b>Le Petit Tonneau — על המרפסת.</b> יין וגבינות מעל הים אחרי השקיעה.<span class="cost">€30 שולם + תוספות</span><span class="flag done">סגור</span><span class="note">להגיע 19:50. לוודא במפורש "in terrazza".</span><span class="links"><a href="https://www.google.com/maps/dir/?api=1&destination=Le%20Petit%20Tonneau%2C%20Cefalu&travelmode=walking" target="_blank" rel="noopener">🧭 נווט</a></span></p></li>
+      <li><span class="t">21:15</span><p class="what"><b>La cantina del Barone</b> (4.7) או <b>Enoteca La Cave</b> (4.8).<span class="cost">€50–65</span><span class="flag open">פתוח</span><span class="src">מפת נדב</span><span class="links"><a href="https://www.google.com/maps/dir/?api=1&destination=La%20Cantina%20del%20Barone%2C%20Cefalu&travelmode=walking" target="_blank" rel="noopener">🧭 נווט</a></span></p></li>
     </ol>
   </article>
 
@@ -249,17 +295,17 @@ footer.end{margin-top:4rem;padding-top:1.5rem;border-top:1px solid var(--hair);c
       <li><span class="t">07:45</span><p class="what">גרניטה ובריוש. <b>מוקדם בכוונה</b> — הטיפוס אחר כך בשמש.<span class="cost">€10–14</span></p></li>
       <li><span class="t">08:45</span><p class="what"><b>צ'ק־אאוט, ומשאירים את המזוודות בקבלה.</b><span class="note">הצ'ק־אאוט ב-YEASY הוא 08:00–10:00 — חייבים לצאת לפני הטיפוס, לא אחריו.</span></p></li>
       <li><span class="t">09:00</span><p class="what"><b>טיפוס La Rocca</b> — 45 דק' למעלה. בפסגה חורבות מקדשים בני 3,000 שנה, העתיקות בסיציליה.<span class="cost">€10</span><span class="note">נפתח 09:00, לא לפני.</span>
-        <span class="links"><a href="https://www.youtube.com/results?search_query=La+Rocca+Cefalu+hike" target="_blank" rel="noopener">▶ וידאו</a></span></p></li>
+        <span class="links"><a href="https://www.google.com/maps/dir/?api=1&destination=La%20Rocca%20di%20Cefalu&travelmode=walking" target="_blank" rel="noopener">🧭 נווט</a><a href="https://www.youtube.com/results?search_query=La+Rocca+Cefalu+hike" target="_blank" rel="noopener">▶ וידאו</a></span></p></li>
       <li><span class="t">11:00</span><p class="what">טבילה אחרונה ומקלחת.<span class="cost">חינם</span></p></li>
-      <li><span class="t">12:15</span><p class="what"><b>Sfrigola</b> (הארנצ'יני הטוב) או <b>La Cefalù Nostrana</b> (4.9).<span class="cost">€20–28</span><span class="flag open">פתוח</span></p></li>
-      <li><span class="t">14:00</span><p class="what">A20 לטאורמינה. נוף ים כל הדרך.<span class="cost">€10 אגרה + €12 דלק</span></p></li>
+      <li><span class="t">12:15</span><p class="what"><b>Sfrigola</b> (הארנצ'יני הטוב) או <b>La Cefalù Nostrana</b> (4.9).<span class="cost">€20–28</span><span class="flag open">פתוח</span><span class="links"><a href="https://www.google.com/maps/dir/?api=1&destination=Sfrigola%2C%20Cefalu&travelmode=walking" target="_blank" rel="noopener">🧭 נווט</a></span></p></li>
+      <li><span class="t">14:00</span><p class="what">A20 לטאורמינה. נוף ים כל הדרך.<span class="cost">€10 אגרה + €12 דלק</span><span class="links"><a href="https://www.google.com/maps/dir/?api=1&destination=Taormina%20Park%20Hotel%2C%20Via%20Bagnoli%20Croci%2092%2C%20Taormina&travelmode=driving" target="_blank" rel="noopener">🧭 נווט לטאורמינה</a></span></p></li>
       <li><span class="t">16:30</span><p class="what">הגעה.<span class="cost">חניון €15–25</span><span class="note">ZTL — מנווטים לחניון בשער העיר, לא לכתובת הלינה.</span></p></li>
-      <li><span class="t">17:15</span><p class="what">צ'ק־אין ב-<b>Taormina Park Hotel</b>, Via Bagnoli Croci 92. <b>ארבעה לילות באותה מיטה</b> — סוף האריזות.<span class="cost">₪2,716 · 8.3 (1,044) · מיקום 9.4</span><span class="note">בריכה, מעלית, קבלה 24 שעות, וארוחת בוקר על טרסה עם נוף לים. החדר עצמו: נוף לגינה ולעיר.</span></p></li>
-      <li><span class="t">18:00</span><p class="what"><b>קורסו אומברטו</b> — חנויות הקרמיקה עם ראשי ה-Teste di Moro. פתוח עד 22:00.<span class="cost">חינם</span></p></li>
+      <li><span class="t">17:15</span><p class="what">צ'ק־אין ב-<b>Taormina Park Hotel</b>, Via Bagnoli Croci 92. <b>ארבעה לילות באותה מיטה</b> — סוף האריזות.<span class="cost">₪2,716 · 8.3 (1,044) · מיקום 9.4</span><span class="note">בריכה, מעלית, קבלה 24 שעות, וארוחת בוקר על טרסה עם נוף לים. החדר עצמו: נוף לגינה ולעיר.</span><span class="links"><a href="https://www.google.com/maps/dir/?api=1&destination=Via%20Bagnoli%20Croci%2092%2C%2098039%20Taormina&travelmode=driving" target="_blank" rel="noopener">🧭 נווט</a></span></p></li>
+      <li><span class="t">18:00</span><p class="what"><b>קורסו אומברטו</b> — חנויות הקרמיקה עם ראשי ה-Teste di Moro. פתוח עד 22:00.<span class="cost">חינם</span><span class="links"><a href="https://www.google.com/maps/dir/?api=1&destination=Corso%20Umberto%2C%20Taormina&travelmode=walking" target="_blank" rel="noopener">🧭 נווט</a></span></p></li>
       <li><span class="t">18:45</span><p class="what"><b>קוקטייל ב-Four Seasons San Domenico</b> — 5 דק' הליכה, מיושבים לפני השקיעה. ה-Bar &amp; Chiostro הוא הקלויסטר מ-White Lotus.<span class="cost">€50–80</span><span class="flag star">היילייט</span><span class="note">להזמין: +39 0942 613 254. לא בשורט.</span>
-        <span class="links"><a href="https://www.youtube.com/results?search_query=San+Domenico+Palace+Taormina+White+Lotus" target="_blank" rel="noopener">▶ וידאו</a></span></p></li>
-      <li><span class="t">20:30</span><p class="what"><b>פיאצה IX אפריל</b> בדרך לארוחה — מגדל השעון מואר, נגני רחוב, אתנה באופק.<span class="cost">חינם</span><span class="note">גם הכיכר וגם הקלויסטר הן נקודות שקיעה (19:23) — אי אפשר בשתיהן. השקיעה מהקלויסטר, הכיכר בערב.</span></p></li>
-      <li><span class="t">21:00</span><p class="what"><b>Ristorante Pirandello 2.0</b> — 4.8 (5,093).<span class="cost">€60–80</span><span class="flag open">להזמין</span><span class="src">מפת נדב</span></p></li>
+        <span class="links"><a href="https://www.google.com/maps/dir/?api=1&destination=San%20Domenico%20Palace%2C%20Taormina&travelmode=walking" target="_blank" rel="noopener">🧭 נווט</a><a href="https://www.youtube.com/results?search_query=San+Domenico+Palace+Taormina+White+Lotus" target="_blank" rel="noopener">▶ וידאו</a></span></p></li>
+      <li><span class="t">20:30</span><p class="what"><b>פיאצה IX אפריל</b> בדרך לארוחה — מגדל השעון מואר, נגני רחוב, אתנה באופק.<span class="cost">חינם</span><span class="note">גם הכיכר וגם הקלויסטר הן נקודות שקיעה (19:23) — אי אפשר בשתיהן. השקיעה מהקלויסטר, הכיכר בערב.</span><span class="links"><a href="https://www.google.com/maps/dir/?api=1&destination=Piazza%20IX%20Aprile%2C%20Taormina&travelmode=walking" target="_blank" rel="noopener">🧭 נווט</a></span></p></li>
+      <li><span class="t">21:00</span><p class="what"><b>Ristorante Pirandello 2.0</b> — 4.8 (5,093).<span class="cost">€60–80</span><span class="flag open">להזמין</span><span class="src">מפת נדב</span><span class="links"><a href="https://www.google.com/maps/dir/?api=1&destination=Ristorante%20Pirandello%202.0%2C%20Taormina&travelmode=walking" target="_blank" rel="noopener">🧭 נווט</a></span></p></li>
     </ol>
     <div class="dfoot"><p><b>למה עיר עתיקה ולא ג'רדיני נקסוס:</b> שלושה מארבעת הערבים נגמרים בהליכה חזרה עם יין. מנקסוס כל ערב כזה נגמר במונית, או שמישהו לא שותה.</p></div>
   </article>
@@ -271,10 +317,10 @@ footer.end{margin-top:4rem;padding-top:1.5rem;border-top:1px solid var(--hair);c
     <ol class="hours">
       <li><span class="t">07:30</span><p class="what">יוצאים.<span class="note">סוודר ונעליים סגורות — קר ב-2,500 מ' גם בספטמבר. הענן נכנס אחה"צ, לכן מוקדם.</span></p></li>
       <li><span class="t">09:00</span><p class="what"><b>רפיוג'ו ספיינצה: רכבל + ג'יפ + מדריך עד 2,850 מ'.</b> הליכה על מדבר לבה עם מדריך געשי.<span class="cost">€82/אדם</span><span class="flag star">היילייט</span><span class="note">גרסאות זולות: רכבל בלבד €54/אדם · מכתשי סילבסטרי בהליכה חינם.</span>
-        <span class="links"><a href="https://www.youtube.com/results?search_query=Mount+Etna+cable+car+jeep+summit+2900" target="_blank" rel="noopener">▶ וידאו</a><a href="https://www.funiviaetna.com/" target="_blank" rel="noopener">🎫 רכבל</a><a href="https://www.google.com/maps/search/Rifugio+Sapienza+Etna" target="_blank" rel="noopener">📍 מפה</a></span></p></li>
+        <span class="links"><a href="https://www.google.com/maps/dir/?api=1&destination=Rifugio%20Sapienza%2C%20Etna&travelmode=driving" target="_blank" rel="noopener">🧭 נווט לאתנה</a><a href="https://www.youtube.com/results?search_query=Mount+Etna+cable+car+jeep+summit+2900" target="_blank" rel="noopener">▶ וידאו</a><a href="https://www.funiviaetna.com/" target="_blank" rel="noopener">🎫 רכבל</a><a href="https://www.google.com/maps/search/Rifugio+Sapienza+Etna" target="_blank" rel="noopener">📍 מפה</a></span></p></li>
       <li><span class="t">12:30</span><p class="what">ירידה, מכתשי סילבסטרי.<span class="cost">חינם</span></p></li>
       <li><span class="t">13:30</span><p class="what"><b>יקב על הצד הצפוני</b> — Nerello Mascalese על אדמת לבה. + צהריים.<span class="cost">€50–80</span><span class="quote">"האזור האהוב עלינו בכל סיציליה."</span><span class="src">רדיט · 594 👍 + 4,729 👍</span><span class="note">מי שנוהג לא טועם.</span>
-        <span class="links"><a href="https://www.youtube.com/results?search_query=Etna+north+side+winery+Nerello+Mascalese" target="_blank" rel="noopener">▶ וידאו</a></span></p></li>
+        <span class="links"><a href="https://www.google.com/maps/dir/?api=1&destination=Cantina%20Firriato%20Cavanera%20Etnea%2C%20Castiglione%20di%20Sicilia&travelmode=driving" target="_blank" rel="noopener">🧭 נווט</a><a href="https://www.youtube.com/results?search_query=Etna+north+side+winery+Nerello+Mascalese" target="_blank" rel="noopener">▶ וידאו</a></span></p></li>
       <li><span class="t">16:00</span><p class="what">חזרה לטאורמינה.</p></li>
       <li><span class="t">17:00</span><p class="what"><b>בבית. אחה"צ פנוי</b> — מקלחת ומנוחה.</p></li>
       <li><span class="t">20:30</span><p class="what">ארוחה קלה בעיר.<span class="cost">€50–70</span><span class="flag open">פתוח</span></p></li>
@@ -287,15 +333,15 @@ footer.end{margin-top:4rem;padding-top:1.5rem;border-top:1px solid var(--hair);c
     <div class="dhead"><p class="dnum">יום 6 · חמישי 10 בספטמבר</p><h3>התיאטרון והים</h3>
     <div class="meta"><span class="tag bed">🛏 Taormina Park Hotel 3/4</span><span class="tag">אפס נהיגה</span><span class="tag">€280–360</span></div></div>
     <ol class="hours">
-      <li><span class="t">08:30</span><p class="what"><b>Bam Bar</b> — הגרניטה המפורסמת (4.5, 9,889).<span class="cost">€12–16</span><span class="quote">מיוטיוב, בכנות: "טעים מאוד, אבל לא בהכרח טוב יותר מגרניטות אחרות בסיציליה."</span></p></li>
+      <li><span class="t">08:30</span><p class="what"><b>Bam Bar</b> — הגרניטה המפורסמת (4.5, 9,889).<span class="cost">€12–16</span><span class="quote">מיוטיוב, בכנות: "טעים מאוד, אבל לא בהכרח טוב יותר מגרניטות אחרות בסיציליה."</span><span class="links"><a href="https://www.google.com/maps/dir/?api=1&destination=Bam%20Bar%2C%20Taormina&travelmode=walking" target="_blank" rel="noopener">🧭 נווט</a></span></p></li>
       <li><span class="t">09:00</span><p class="what"><b>התיאטרון היווני</b> — מאה 3 לפנה"ס. הבמה ממסגרת את אתנה ואת הים בתוך הקשת. <b>ב-09:00 כמעט לבד; מ-10:30 מתמלא.</b><span class="cost">€28</span><span class="flag star">היילייט</span><span class="note">מדרגות אבן לא אחידות, לא נגיש.</span>
-        <span class="links"><a href="https://www.youtube.com/results?search_query=Teatro+Antico+Taormina+Greek+theatre+4K" target="_blank" rel="noopener">▶ וידאו</a><a href="https://www.google.com/maps/search/Teatro+Antico+di+Taormina" target="_blank" rel="noopener">📍 מפה</a></span></p></li>
-      <li><span class="t">11:00</span><p class="what"><b>Via Roma</b> — ההליכה על הצוק, "נוף גלויה בכל עיקול". ובדרך גני <b>Villa Comunale</b>.<span class="cost">€5</span></p></li>
+        <span class="links"><a href="https://www.google.com/maps/dir/?api=1&destination=Teatro%20Antico%20di%20Taormina&travelmode=walking" target="_blank" rel="noopener">🧭 נווט</a><a href="https://www.youtube.com/results?search_query=Teatro+Antico+Taormina+Greek+theatre+4K" target="_blank" rel="noopener">▶ וידאו</a><a href="https://www.google.com/maps/search/Teatro+Antico+di+Taormina" target="_blank" rel="noopener">📍 מפה</a></span></p></li>
+      <li><span class="t">11:00</span><p class="what"><b>Via Roma</b> — ההליכה על הצוק, "נוף גלויה בכל עיקול". ובדרך גני <b>Villa Comunale</b>.<span class="cost">€5</span><span class="links"><a href="https://www.google.com/maps/dir/?api=1&destination=Villa%20Comunale%2C%20Taormina&travelmode=walking" target="_blank" rel="noopener">🧭 נווט</a></span></p></li>
       <li><span class="t">13:15</span><p class="what">צהריים בעיר.<span class="cost">€35–50</span><span class="flag open">פתוח</span></p></li>
       <li><span class="t">14:30</span><p class="what"><b>סיאסטה אמיתית</b> — מקלחת ומנוחה לפני הסירה.</p></li>
       <li><span class="t">17:30</span><p class="what"><b>סירת שקיעה, שעתיים.</b> כוללת Grotta Azzurra, מערת האוהבים, קאפו טאורמינה, מזארו, עצירת שחייה, ופרוסקו עם עוגיות שקדים. <b>מקס 12 אנשים.</b><span class="cost">€90 לשניים</span><span class="flag star">היילייט</span><span class="note">ביטול חופשי 24 שעות.</span>
         <span class="links"><a href="https://www.youtube.com/results?search_query=Taormina+sunset+boat+tour+Grotta+Azzurra" target="_blank" rel="noopener">▶ וידאו</a></span></p></li>
-      <li><span class="t">21:00</span><p class="what"><b>Sky Rooftop</b> — ארוחה עם נוף לאתנה ולעיר.<span class="cost">€70</span><span class="flag open">להזמין</span></p></li>
+      <li><span class="t">21:00</span><p class="what"><b>Sky Rooftop</b> — ארוחה עם נוף לאתנה ולעיר.<span class="cost">€70</span><span class="flag open">להזמין</span><span class="links"><a href="https://www.google.com/maps/dir/?api=1&destination=Sky%20Rooftop%20Taormina&travelmode=walking" target="_blank" rel="noopener">🧭 נווט</a></span></p></li>
     </ol>
     <div class="dfoot"><p><b>איזולה בלה עברה למחר:</b> הסירה כבר כוללת עצירת שחייה. אין היגיון לשחות ב-14:30, לעלות רטובים על סירה, ואז להגיע לארוחה.</p></div>
   </article>
@@ -307,13 +353,13 @@ footer.end{margin-top:4rem;padding-top:1.5rem;border-top:1px solid var(--hair);c
     <ol class="hours">
       <li><span class="t">08:15</span><p class="what">קפה, יוצאים. 20 דק' לנקודת המפגש.</p></li>
       <li><span class="t">09:00</span><p class="what"><b>Body rafting בנקיק האלקנטרה</b>, 1.5–2 שעות. קופצים, שוחים, ומשתמשים בגוף כרפסודה בין הרפידים — בקטע "אגמי אלקנטרה", רחוק מהאזור העמוס.<span class="cost">€39–45/אדם</span><span class="flag star">היילייט</span><span class="note">כולל חליפת נאופרן, גרבי נאופרן, קסדה, אפוד ומדריך — וזה מה שהופך מים של 8–12°C לכיף. ביטול חופשי, בלי תשלום מראש. גיל 12–55.</span>
-        <span class="links"><a href="https://www.youtube.com/results?search_query=Alcantara+gorge+body+rafting+Sicily" target="_blank" rel="noopener">▶ וידאו</a><a href="https://www.google.com/maps/search/Gole+Alcantara" target="_blank" rel="noopener">📍 מפה</a></span></p></li>
+        <span class="links"><a href="https://www.google.com/maps/dir/?api=1&destination=Gole%20Alcantara&travelmode=driving" target="_blank" rel="noopener">🧭 נווט לאלקנטרה</a><a href="https://www.youtube.com/results?search_query=Alcantara+gorge+body+rafting+Sicily" target="_blank" rel="noopener">▶ וידאו</a><a href="https://www.google.com/maps/search/Gole+Alcantara" target="_blank" rel="noopener">📍 מפה</a></span></p></li>
       <li><span class="t">11:30</span><p class="what">מקלחת והתארגנות.</p></li>
       <li><span class="t">12:30</span><p class="what">צהריים בדרך חזרה או בטאורמינה.<span class="cost">€30–45</span><span class="flag open">פתוח</span></p></li>
       <li><span class="t">14:30</span><p class="what"><b>רכבל למטה + איזולה בלה</b> — שחייה ושנורקל בשמורה הימית.<span class="cost">€20–30</span><span class="note">חלוקים ולא חול — נעלי מים.</span>
-        <span class="links"><a href="https://www.youtube.com/results?search_query=Isola+Bella+Taormina+snorkeling" target="_blank" rel="noopener">▶ וידאו</a></span></p></li>
+        <span class="links"><a href="https://www.google.com/maps/dir/?api=1&destination=Isola%20Bella%2C%20Taormina&travelmode=walking" target="_blank" rel="noopener">🧭 נווט</a><a href="https://www.youtube.com/results?search_query=Isola+Bella+Taormina+snorkeling" target="_blank" rel="noopener">▶ וידאו</a></span></p></li>
       <li><span class="t">18:30</span><p class="what"><b>קסטלמולה</b> — 20 דק' למעלה, מעל טאורמינה עצמה. יין שקדים בבר <b>Turrisi</b>, ונוף כפול: הים מצד אחד ואתנה מהשני.<span class="cost">€20–30</span>
-        <span class="links"><a href="https://www.youtube.com/results?search_query=Castelmola+Sicily+Bar+Turrisi+almond+wine" target="_blank" rel="noopener">▶ וידאו</a></span></p></li>
+        <span class="links"><a href="https://www.google.com/maps/dir/?api=1&destination=Bar%20Turrisi%2C%20Castelmola&travelmode=driving" target="_blank" rel="noopener">🧭 נווט</a><a href="https://www.youtube.com/results?search_query=Castelmola+Sicily+Bar+Turrisi+almond+wine" target="_blank" rel="noopener">▶ וידאו</a></span></p></li>
       <li><span class="t">19:23</span><p class="what"><b>השקיעה מקסטלמולה</b> — הנקודה הגבוהה באזור.<span class="cost">חינם</span></p></li>
       <li><span class="t">21:00</span><p class="what"><b>ארוחת ערב אחרונה</b> בעיר העתיקה.<span class="cost">€60–80</span><span class="flag open">פתוח</span></p></li>
     </ol>
@@ -328,9 +374,9 @@ footer.end{margin-top:4rem;padding-top:1.5rem;border-top:1px solid var(--hair);c
       <li><span class="t">07:00</span><p class="what">קפה, אורזים, צ'ק־אאוט.<span class="note">בלי ארוחת בוקר גדולה — אוכלים טוב יותר במונרעאלה.</span></p></li>
       <li><span class="t">07:30</span><p class="what">A18 → A19, כמעט הכל אוטוסטרדה.<span class="cost">~€18 אגרה + €30 דלק</span></p></li>
       <li><span class="t">10:30</span><p class="what"><b>מונרעאלה — הקתדרלה והצלב־מנזר.</b> 6,000 מ"ר פסיפסים ביזנטיים, וחצר עם 228 עמודים מזווגים שאין שניים מהם זהים. נוף על מפרץ פלרמו.<span class="cost">€9–16</span><span class="note">מגיעים לפני הקבוצות. הצלב־מנזר פתוח ב'–ש' 09:00–19:00.</span>
-        <span class="links"><a href="https://www.youtube.com/results?search_query=Monreale+Cathedral+cloister+mosaics+4K" target="_blank" rel="noopener">▶ וידאו</a><a href="https://www.google.com/maps/search/Duomo+di+Monreale" target="_blank" rel="noopener">📍 מפה</a></span></p></li>
+        <span class="links"><a href="https://www.google.com/maps/dir/?api=1&destination=Duomo%20di%20Monreale&travelmode=driving" target="_blank" rel="noopener">🧭 נווט למונרעאלה</a><a href="https://www.youtube.com/results?search_query=Monreale+Cathedral+cloister+mosaics+4K" target="_blank" rel="noopener">▶ וידאו</a><a href="https://www.google.com/maps/search/Duomo+di+Monreale" target="_blank" rel="noopener">📍 מפה</a></span></p></li>
       <li><span class="t">12:30</span><p class="what"><b>הצהריים האמיתי האחרון</b> — נוף על המפרץ, לא אוכל שדה תעופה.<span class="cost">€35–50</span><span class="flag open">פתוח</span></p></li>
-      <li><span class="t">13:35</span><p class="what">45 דק' לשדה, עם עצירת דלק לפני ההחזרה.<span class="cost">€15</span></p></li>
+      <li><span class="t">13:35</span><p class="what">45 דק' לשדה, עם עצירת דלק לפני ההחזרה.<span class="cost">€15</span><span class="links"><a href="https://www.google.com/maps/dir/?api=1&destination=Palermo%20Falcone%20Borsellino%20Airport&travelmode=driving" target="_blank" rel="noopener">🧭 נווט לשדה</a></span></p></li>
       <li><span class="t">14:00</span><p class="what">החזרת הרכב.<span class="note">לצלם את כל הרכב ואת מחוון הדלק.</span></p></li>
       <li><span class="t">14:20</span><p class="what"><b>דלפק המזוודות</b> — נפתח בדיוק 14:25, נסגר 15:45.</p></li>
       <li><span class="t">16:25</span><p class="what"><b>המראה.</b> נחיתה בתל אביב 20:40.</p></li>
