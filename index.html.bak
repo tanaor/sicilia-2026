@@ -157,13 +157,13 @@ footer.end{margin-top:4rem;padding-top:1.5rem;border-top:1px solid var(--hair);c
 <div class="wrap">
 
 <header class="mast">
-  <p class="kicker">‎5–7 באוקטובר 2026 · גל וקארין</p>
+  <p class="kicker">‎5–12 בספטמבר 2026 · גל וקארין</p>
   <h1>סיציליה,<br>שבעה לילות</h1>
   <p class="dek">שלוש מיטות, מעבר אמיתי אחד, ושישה ימים מלאים בין פלרמו לאתנה. <strong>שלוש המיטות סגורות. ₪12,663.</strong></p>
   <dl class="facts">
     <div class="fact"><dt>טיסה</dt><dd>TLV → פלרמו</dd></div>
-    <div class="fact"><dt>נחיתה</dt><dd>שבת 30.9, 23:55</dd></div>
-    <div class="fact"><dt>חזרה</dt><dd>שבת 7.10, 16:25</dd></div>
+    <div class="fact"><dt>נחיתה</dt><dd>שבת 5.9, 23:55</dd></div>
+    <div class="fact"><dt>חזרה</dt><dd>שבת 12.9, 16:25</dd></div>
     <div class="fact"><dt>סה"כ צפוי</dt><dd>₪12,663</dd></div>
   </dl>
   <nav class="top" aria-label="ניווט">
@@ -189,15 +189,15 @@ footer.end{margin-top:4rem;padding-top:1.5rem;border-top:1px solid var(--hair);c
 
   <h3 style="font-size:1.15rem;margin:0 0 .8rem">🚗 הנסיעות הגדולות</h3>
   <div class="navgrid">
-      <a href="https://www.google.com/maps/dir/?api=1&destination=Via%20di%20Lampedusa%2023%2C%2090133%20Palermo&travelmode=driving" target="_blank" rel="noopener">✈️ שדה פלרמו → One<span>30.9 · מונית ~50 דק'</span></a>
-      <a href="https://www.google.com/maps/dir/?api=1&destination=Via%20Antonio%20Gramsci%2045%2C%2090015%20Cefalu&travelmode=driving" target="_blank" rel="noopener">🏖️ פלרמו → צ'פאלו<span>2.10 · 1:05 · 70 ק"מ</span></a>
-      <a href="https://www.google.com/maps/dir/?api=1&destination=Via%20Bagnoli%20Croci%2092%2C%2098039%20Taormina&travelmode=driving" target="_blank" rel="noopener">🌋 צ'פאלו → טאורמינה<span>3.10 · 2:10 · A20</span></a>
-      <a href="https://www.google.com/maps/dir/?api=1&destination=Rifugio%20Sapienza%2C%20Etna&travelmode=driving" target="_blank" rel="noopener">🌋 טאורמינה → אתנה<span>4.10 · 1:30</span></a>
-      <a href="https://www.google.com/maps/dir/?api=1&destination=Cantina%20Firriato%20Cavanera%20Etnea%2C%20Castiglione%20di%20Sicilia&travelmode=driving" target="_blank" rel="noopener">🍷 אתנה → יקב צפוני<span>4.10</span></a>
-      <a href="https://www.google.com/maps/dir/?api=1&destination=Gole%20Alcantara&travelmode=driving" target="_blank" rel="noopener">🌊 טאורמינה → אלקנטרה<span>6.10 · 20 דק'</span></a>
-      <a href="https://www.google.com/maps/dir/?api=1&destination=Bar%20Turrisi%2C%20Castelmola&travelmode=driving" target="_blank" rel="noopener">🍷 טאורמינה → קסטלמולה<span>6.10 · 20 דק'</span></a>
-      <a href="https://www.google.com/maps/dir/?api=1&destination=Duomo%20di%20Monreale&travelmode=driving" target="_blank" rel="noopener">⛪ טאורמינה → מונרעאלה<span>7.10 · 3:00 · A18→A19</span></a>
-      <a href="https://www.google.com/maps/dir/?api=1&destination=Palermo%20Falcone%20Borsellino%20Airport&travelmode=driving" target="_blank" rel="noopener">✈️ מונרעאלה → שדה<span>7.10 · 45 דק'</span></a>
+      <a href="https://www.google.com/maps/dir/?api=1&destination=Via%20di%20Lampedusa%2023%2C%2090133%20Palermo&travelmode=driving" target="_blank" rel="noopener">✈️ שדה פלרמו → One<span>5.9 · מונית ~50 דק'</span></a>
+      <a href="https://www.google.com/maps/dir/?api=1&destination=Via%20Antonio%20Gramsci%2045%2C%2090015%20Cefalu&travelmode=driving" target="_blank" rel="noopener">🏖️ פלרמו → צ'פאלו<span>7.9 · 1:05 · 70 ק"מ</span></a>
+      <a href="https://www.google.com/maps/dir/?api=1&destination=Via%20Bagnoli%20Croci%2092%2C%2098039%20Taormina&travelmode=driving" target="_blank" rel="noopener">🌋 צ'פאלו → טאורמינה<span>8.9 · 2:10 · A20</span></a>
+      <a href="https://www.google.com/maps/dir/?api=1&destination=Rifugio%20Sapienza%2C%20Etna&travelmode=driving" target="_blank" rel="noopener">🌋 טאורמינה → אתנה<span>9.9 · 1:30</span></a>
+      <a href="https://www.google.com/maps/dir/?api=1&destination=Cantina%20Firriato%20Cavanera%20Etnea%2C%20Castiglione%20di%20Sicilia&travelmode=driving" target="_blank" rel="noopener">🍷 אתנה → יקב צפוני<span>9.9</span></a>
+      <a href="https://www.google.com/maps/dir/?api=1&destination=Gole%20Alcantara&travelmode=driving" target="_blank" rel="noopener">🌊 טאורמינה → אלקנטרה<span>11.9 · 20 דק'</span></a>
+      <a href="https://www.google.com/maps/dir/?api=1&destination=Bar%20Turrisi%2C%20Castelmola&travelmode=driving" target="_blank" rel="noopener">🍷 טאורמינה → קסטלמולה<span>11.9 · 20 דק'</span></a>
+      <a href="https://www.google.com/maps/dir/?api=1&destination=Duomo%20di%20Monreale&travelmode=driving" target="_blank" rel="noopener">⛪ טאורמינה → מונרעאלה<span>12.9 · 3:00 · A18→A19</span></a>
+      <a href="https://www.google.com/maps/dir/?api=1&destination=Palermo%20Falcone%20Borsellino%20Airport&travelmode=driving" target="_blank" rel="noopener">✈️ מונרעאלה → שדה<span>12.9 · 45 דק'</span></a>
       <a href="https://www.google.com/maps/dir/?api=1&destination=Parcheggio%20Lumbi%2C%20Taormina&travelmode=driving" target="_blank" rel="noopener">🅿️ חניון Lumbi, טאורמינה<span>גיבוי לחניה</span></a>
       <a href="https://www.google.com/maps/dir/?api=1&destination=Parcheggio%20Lungomare%20Giuseppe%20Giardina%2C%20Cefalu&travelmode=driving" target="_blank" rel="noopener">🅿️ Lungomare Giardina, צ'פאלו<span>540 מקומות, מחוץ ל-ZTL</span></a>
   </div>
@@ -224,16 +224,16 @@ footer.end{margin-top:4rem;padding-top:1.5rem;border-top:1px solid var(--hair);c
 
 <section id="car">
   <h2 class="sec">הרכב</h2>
-  <p class="lede"><strong>VW Polo · Locauto</strong> · אוטומט · Compact SUV · <strong>VW Polo · Locauto</strong> · שולם ₪1,364.102 · ביטול חינם עד 48 שעות לפני.</p>
+  <p class="lede"><strong>Jeep Avenger</strong> · אוטומט · Compact SUV · <strong>Sicily By Car</strong> · שולם ₪1,369.92 · ביטול חינם עד 48 שעות לפני.</p>
 
   <div class="scroll"><table>
     <tbody>
-      <tr><td>🎫 מספר הזמנה</td><td class="n">D015117085</td></tr>
+      <tr><td>🎫 מספר הזמנה</td><td class="n">D015054423</td></tr>
       <tr><td>🎫 מספר אישור</td><td class="n">IT588392570</td></tr>
       <tr><td>☎️ טלפון הספק</td><td class="n">+39 091 585 039 · +39 3 489 905 848</td></tr>
-      <tr><td>📍 <b>איסוף</b> — שני 2.10, 11:00</td><td><b>Via Napoli 86-88-90, Palermo</b></td></tr>
-      <tr><td>📍 <b>החזרה</b> — שבת 7.10, 13:30</td><td><b>Località Cinisi, Punta Raisi</b> (אזור השדה)</td></tr>
-      <tr><td>💰 שולם</td><td class="n">₪1,364.102 (€393.82)</td></tr>
+      <tr><td>📍 <b>איסוף</b> — שני 7.9, 11:00</td><td><b>Via Napoli 86-88-90, Palermo</b></td></tr>
+      <tr><td>📍 <b>החזרה</b> — שבת 12.9, 13:30</td><td><b>Località Cinisi, Punta Raisi</b> (אזור השדה)</td></tr>
+      <tr><td>💰 שולם</td><td class="n">₪1,369.92 (€393.82)</td></tr>
       <tr><td>💳 בדלפק</td><td class="n">₪0 + פיקדון ₪700 (חסימה, חוזרת)</td></tr>
       <tr><td>⛽ דלק</td><td>Full to full · קילומטראז' ללא הגבלה</td></tr>
     </tbody>
@@ -243,8 +243,8 @@ footer.end{margin-top:4rem;padding-top:1.5rem;border-top:1px solid var(--hair);c
     <h3>⛔ קארין לא נהגת רשומה — גל הוא הנהג היחיד</h3>
     <p style="margin:0 0 .6rem"><b>קארין לא נוהגת. אפילו לא פעם אחת, אפילו לא 100 מטר.</b> אם היא תנהג, חוזה ההשכרה בטל וכל הביטוחים בטלים איתו — כולל ה-Full Coverage של ₪398 שנקנה. לא "מצומצם", <b>בטל</b>. שריטה במצב כזה = ₪6,370 מהכיס.</p>
     <ul>
-      <li>🍷 <b>4.10, היקב באתנה:</b> גל לא טועם. נקודה. קארין כן.</li>
-      <li>🚗 <b>7.10:</b> 3:45 נהיגה ליום האחרון, לבד. יוצאים 07:30 ועוצרים לקפה.</li>
+      <li>🍷 <b>9.9, היקב באתנה:</b> גל לא טועם. נקודה. קארין כן.</li>
+      <li>🚗 <b>12.9:</b> 3:45 נהיגה ליום האחרון, לבד. יוצאים 07:30 ועוצרים לקפה.</li>
       <li>סה"כ ~800 ק"מ נהיגה יחידה על חמישה ימים. <b>אין גיבוי</b> — זו העלות האמיתית של החיסכון על נהג נוסף.</li>
     </ul>
   </div>
@@ -252,7 +252,7 @@ footer.end{margin-top:4rem;padding-top:1.5rem;border-top:1px solid var(--hair);c
   <div class="call lava">
     <h3>🚨 המשרד סגור 13:00–14:59</h3>
     <p style="margin:0 0 .5rem">שעות הפתיחה ב-Via Napoli: <b>09:00–12:59 · 15:00–19:59</b>. סיאסטה איטלקית.</p>
-    <p style="margin:0"><b>הכלל: להיות שם לא אחרי 12:15.</b> אם תגיעו ב-13:10, ממתינים עד 15:00 — וצ'פאלו נפתחת ב-16:15 במקום 13:15, בלי Il Locale ובלי חוף. <b>ומהירות האיסוף שלהם מדורגת 1.10</b>, החלש בציוניהם, אז מגיעים ב-10:45 ולא ב-11:00. אם קפלה פלטינה נמשכת — יוצאים ממנה. היא תישאר שם, הרכב לא.</p>
+    <p style="margin:0"><b>הכלל: להיות שם לא אחרי 12:15.</b> אם תגיעו ב-13:10, ממתינים עד 15:00 — וצ'פאלו נפתחת ב-16:15 במקום 13:15, בלי Il Locale ובלי חוף. <b>ומהירות האיסוף שלהם מדורגת 6.9</b>, החלש בציוניהם, אז מגיעים ב-10:45 ולא ב-11:00. אם קפלה פלטינה נמשכת — יוצאים ממנה. היא תישאר שם, הרכב לא.</p>
   </div>
 
   <div class="call">
@@ -292,14 +292,14 @@ footer.end{margin-top:4rem;padding-top:1.5rem;border-top:1px solid var(--hair);c
     <h3>✅ טאורמינה — מותר להיכנס. בתנאי אחד</h3>
     <p style="margin:0 0 .6rem">המלון אישר בכתב (26.8): <i>"Regarding the ZTL zone, <b>access is allowed</b>, the restricted traffic zone is not in effect."</i></p>
     <p style="margin:0 0 .6rem">אורחי מלון רשאים להיכנס לפריקת מזוודות, <b>והמלון מעביר את מספר הלוחית למשטרה המקומית</b>. בחינם, לוקח דקות.</p>
-    <p style="margin:0"><b>🔴 אבל המלון לא ביקש את הלוחית — וזה הפער.</b> המצלמה מכירה רק מספרי לוחית, לא שמות אורחים. ואת הלוחית נדע רק ב-2.10 בבוקר, כשנקבל את ה-Jeep.</p>
+    <p style="margin:0"><b>🔴 אבל המלון לא ביקש את הלוחית — וזה הפער.</b> המצלמה מכירה רק מספרי לוחית, לא שמות אורחים. ואת הלוחית נדע רק ב-7.9 בבוקר, כשנקבל את ה-Jeep.</p>
   </div>
 
   <div class="call">
     <h3>📸 מה לעשות — שלושה צעדים</h3>
     <ul>
       <li><b>1. עכשיו:</b> לשאול את המלון אם הם צריכים את מספר הלוחית, לאן לשלוח ועד מתי.</li>
-      <li><b>2. 🔴 2.10 בבוקר, מיד אחרי קבלת הרכב:</b> לצלם את הלוחית ולשלוח למלון — <b>לפני שיוצאים מפלרמו</b>. לא ב-3.10 בכניסה לטאורמינה.</li>
+      <li><b>2. 🔴 7.9 בבוקר, מיד אחרי קבלת הרכב:</b> לצלם את הלוחית ולשלוח למלון — <b>לפני שיוצאים מפלרמו</b>. לא ב-8.9 בכניסה לטאורמינה.</li>
       <li><b>3. תוכנית ב' בכל מקרה:</b> החניה של המלון (€18/לילה) <b>לא ניתנת להזמנה</b> ונבדקת בהגעה. אם אין מקום או אין רישום — <b>לא נכנסים</b>, ונוסעים ל-Parcheggio Lumbi.</li>
     </ul>
   </div>
@@ -307,7 +307,7 @@ footer.end{margin-top:4rem;padding-top:1.5rem;border-top:1px solid var(--hair);c
   <div class="call">
     <h3>🏛️ פלרמו · 🏖️ צ'פאלו</h3>
     <ul>
-      <li><b>פלרמו:</b> ה-B&B ב-ZTL, אבל <b>אין לנו רכב שם</b> — נאסף ב-2.10 ב-10:45 ויוצאים ישר. <i>(לידיעה: מנוי יומי €5 בטבקריה.)</i></li>
+      <li><b>פלרמו:</b> ה-B&B ב-ZTL, אבל <b>אין לנו רכב שם</b> — נאסף ב-7.9 ב-10:45 ויוצאים ישר. <i>(לידיעה: מנוי יומי €5 בטבקריה.)</i></li>
       <li><b>צ'פאלו:</b> 🔴 מרכז ZTL ואין לנו אישור. <b>שם באמת לא נכנסים.</b> חונים ב-Lungomare Giardina (~€12), או בחניון ברחוב הסמוך ל-YEASY (€15/יום, הצוות מזמין), או <b>חינם בבית הקברות מאחורי La Rocca</b> — ושם ממילא מטפסים למחרת ב-09:00.</li>
       <li>🎨 <b>צבעי קווי החניה:</b> ⚪ לבן = חינם · 🔵 כחול = בתשלום 09:00–24:00 · 🟡 <b>צהוב = תושבים בלבד, גרירה</b></li>
     </ul>
@@ -326,7 +326,7 @@ footer.end{margin-top:4rem;padding-top:1.5rem;border-top:1px solid var(--hair);c
 
   <!-- D1 -->
   <article class="day pa">
-    <div class="dhead"><p class="dnum">יום 1 · שבת 30 בספטמבר</p><h3>הנחיתה</h3>
+    <div class="dhead"><p class="dnum">יום 1 · שבת 5 בספטמבר</p><h3>הנחיתה</h3>
     <div class="meta"><span class="tag bed">🛏 One · פלרמו 1/2</span><span class="tag">בלי רכב</span><span class="tag">✅ מוזמן</span></div></div>
     <ol class="hours">
       <li><span class="t">23:55</span><p class="what">נחיתה. יציאה עם מזוודה סביב 00:20.</p></li>
@@ -371,7 +371,7 @@ footer.end{margin-top:4rem;padding-top:1.5rem;border-top:1px solid var(--hair);c
       <li><span class="t">08:30</span><p class="what">גרניטה אחרונה בפלרמו, אורזים.<span class="cost">€10–14</span></p></li>
       <li><span class="t">09:30</span><p class="what"><b>קפלה פלטינה</b> — תקרה ערבית, פסיפסים ביזנטיים ומבנה נורמני, הכל בחדר אחד.<span class="cost">€30–40</span><span class="quote">"אחת הקפלות הכי מרשימות שראיתי. התקרה חד־פעמית."</span><span class="src">רדיט · 2,546 👍</span>
         <span class="links"><a href="https://www.google.com/maps/dir/?api=1&destination=Cappella%20Palatina%2C%20Palermo&travelmode=walking" target="_blank" rel="noopener">🧭 נווט</a><a href="https://www.youtube.com/results?search_query=Cappella+Palatina+Palermo+4K" target="_blank" rel="noopener">▶ וידאו</a><a href="https://www.federicosecondo.org/" target="_blank" rel="noopener">🎫 כרטיסים</a></span></p></li>
-      <li><span class="t">10:45</span><p class="what"><b>איסוף הרכב — VW Polo · Locauto, Via Napoli 86-88-90.</b><span class="cost">VW Polo · Locauto · ₪1,370 שולם · פיקדון ₪700</span><span class="note">🔴 המשרד סגור 13:00–14:59. להיות שם לא אחרי 12:15.<br>🎥 וידאו של כל שריטה ושל מחוון הדלק לפני שיוצאים.<br>📸 <b>ולצלם את לוחית הרישוי ולשלוח למלון בטאורמינה — עכשיו, לפני שיוצאים מפלרמו.</b></span><span class="links"><a href="https://www.google.com/maps/dir/?api=1&destination=Palermo%20city%20centre%20car%20rental&travelmode=walking" target="_blank" rel="noopener">🧭 נווט</a></span></p></li>
+      <li><span class="t">10:45</span><p class="what"><b>איסוף הרכב — Sicily By Car, Via Napoli 86-88-90.</b><span class="cost">Jeep Avenger · ₪1,370 שולם · פיקדון ₪700</span><span class="note">🔴 המשרד סגור 13:00–14:59. להיות שם לא אחרי 12:15.<br>🎥 וידאו של כל שריטה ושל מחוון הדלק לפני שיוצאים.<br>📸 <b>ולצלם את לוחית הרישוי ולשלוח למלון בטאורמינה — עכשיו, לפני שיוצאים מפלרמו.</b></span><span class="links"><a href="https://www.google.com/maps/dir/?api=1&destination=Palermo%20city%20centre%20car%20rental&travelmode=walking" target="_blank" rel="noopener">🧭 נווט</a></span></p></li>
       <li><span class="t">12:00</span><p class="what">כביש החוף לצ'פאלו, שעה וחמש.<span class="cost">~€5 דלק</span><span class="links"><a href="https://www.google.com/maps/dir/?api=1&destination=YEASY%20smart%20rooms%2C%20Via%20Antonio%20Gramsci%2045%2C%20Cefalu&travelmode=driving" target="_blank" rel="noopener">🧭 נווט לצ'פאלו</a></span></p></li>
       <li><span class="t">13:15</span><p class="what">צ'ק־אין ב-<b>YEASY smart rooms</b>, 45 Via Antonio Gramsci.<span class="cost">₪542 · חדר 26 מ"ר עם מרפסת · 9.4 (830)</span><span class="note">🔴 <b>צ'ק־אין עצמי — חייבים לכתוב לו בוואטסאפ לפחות יום לפני, אחרת אין קוד.</b> 📱 +39 0921 820855 (כל שפה) · ☎️ +39 320 072 9936 (איטלקית). בהודעה הראשונה: שם + מספר הזמנה <b>5623565923_6480850716</b>.<br>ZTL — חונים מחוץ למרכז: Lungomare Giardina ~€12, חניון ברחוב הסמוך €15/יום (הצוות מזמין), או חינם בבית הקברות מאחורי La Rocca.</span><span class="links"><a href="https://www.google.com/maps/dir/?api=1&destination=Via%20Antonio%20Gramsci%2045%2C%2090015%20Cefalu&travelmode=driving" target="_blank" rel="noopener">🧭 נווט</a></span></p></li>
       <li><span class="t">13:45</span><p class="what"><b>Il Locale</b> — פיצה.<span class="cost">€30–40</span><span class="quote">"הפיצה האהובה עלינו בכל סיציליה. אנשים באים לצ'פאלו במיוחד בשבילה."</span><span class="note">לאמת שהם עושים צהריים — הרבה פיצריות איטלקיות פותחות רק בערב.</span><span class="links"><a href="https://www.google.com/maps/dir/?api=1&destination=Il%20Locale%2C%20Cefalu&travelmode=walking" target="_blank" rel="noopener">🧭 נווט</a></span></p></li>
@@ -466,7 +466,7 @@ footer.end{margin-top:4rem;padding-top:1.5rem;border-top:1px solid var(--hair);c
 
   <!-- D8 -->
   <article class="day go">
-    <div class="dhead"><p class="dnum">יום 8 · שבת 7 באוקטובר</p><h3>מונרעאלה בדרך לטיסה</h3>
+    <div class="dhead"><p class="dnum">יום 8 · שבת 12 בספטמבר</p><h3>מונרעאלה בדרך לטיסה</h3>
     <div class="meta"><span class="tag">🚗 3:00 + 0:45</span><span class="tag">€60–80</span></div></div>
     <ol class="hours">
       <li><span class="t">07:00</span><p class="what">קפה, אורזים, צ'ק־אאוט.<span class="note">בלי ארוחת בוקר גדולה — אוכלים טוב יותר במונרעאלה.</span></p></li>
@@ -496,13 +496,13 @@ footer.end{margin-top:4rem;padding-top:1.5rem;border-top:1px solid var(--hair);c
     <div class="scroll"><table>
       <thead><tr><th>מקום</th><th>נכס</th><th>€</th><th>₪</th></tr></thead>
       <tbody>
-        <tr><td>🏛️ פלרמו · 5–2.10</td><td><b>One</b> — Deluxe Queen, מרפסת</td><td class="n">444</td><td class="n">1,556</td></tr>
-        <tr><td>🏖️ צ'פאלו · 7–3.10</td><td><b>YEASY</b> — Family Room, 26 מ"ר</td><td class="n">155</td><td class="n">542</td></tr>
-        <tr><td>🌋 טאורמינה · 8–7.10</td><td><b>Taormina Park Hotel</b> — Double</td><td class="n">776</td><td class="n">2,716</td></tr>
+        <tr><td>🏛️ פלרמו · 5–7.9</td><td><b>One</b> — Deluxe Queen, מרפסת</td><td class="n">444</td><td class="n">1,556</td></tr>
+        <tr><td>🏖️ צ'פאלו · 7–8.9</td><td><b>YEASY</b> — Family Room, 26 מ"ר</td><td class="n">155</td><td class="n">542</td></tr>
+        <tr><td>🌋 טאורמינה · 8–12.9</td><td><b>Taormina Park Hotel</b> — Double</td><td class="n">776</td><td class="n">2,716</td></tr>
         <tr class="hi"><td>סה"כ 7 לילות</td><td></td><td class="n">1,375</td><td class="n">4,813</td></tr>
       </tbody>
     </table></div>
-    <p style="margin:0"><b>ביטול חינם בכל השלוש:</b> פלרמו עד 4.9 · צ'פאלו עד 30.9 · טאורמינה עד 3.9. ואף שקל לא יוצא לפני 1 בספטמבר.</p>
+    <p style="margin:0"><b>ביטול חינם בכל השלוש:</b> פלרמו עד 4.9 · צ'פאלו עד 5.9 · טאורמינה עד 3.9. ואף שקל לא יוצא לפני 1 בספטמבר.</p>
   </div>
 
   <h3 style="font-size:1.2rem;margin:2rem 0 .7rem">סך כל הטיול</h3>
@@ -600,16 +600,16 @@ footer.end{margin-top:4rem;padding-top:1.5rem;border-top:1px solid var(--hair);c
     <ul>
       <li>✈️ <b>טיסות</b> — ₪1,250 · שולם · TLV→פלרמו, Wizz ישיר</li>
       <li>🏛️ <b>פלרמו · One</b> — Via di Lampedusa 23 · Deluxe Queen עם מרפסת · <b>₪1,556</b> · 9.5 (446) · ביטול חינם עד 4.9 · הצ'ק־אין פתוח בלי שעת סגירה, אז 01:15 בסדר</li>
-      <li>🏖️ <b>צ'פאלו · YEASY</b> — 45 Via Antonio Gramsci · Family Room 26 מ"ר · <b>₪542</b> · 9.4 (830) · ביטול חינם עד 30.9 · ☎️ +39 320 072 9936</li>
+      <li>🏖️ <b>צ'פאלו · YEASY</b> — 45 Via Antonio Gramsci · Family Room 26 מ"ר · <b>₪542</b> · 9.4 (830) · ביטול חינם עד 5.9 · ☎️ +39 320 072 9936</li>
       <li>🌋 <b>טאורמינה · Park Hotel</b> — Via Bagnoli Croci 92 · Double/Twin · <b>₪2,716</b> · 8.3 (1,044) · בריכה + מעלית + קבלה 24ש' · ביטול חינם עד 3.9</li>
-      <li>🚗 <b>רכב · VW Polo · Locauto</b> — VW Polo · Locauto · <b>₪1,370 שולם</b> · איסוף Via Napoli 2.10 ב-11:00 → החזרה בשדה 7.10 ב-13:30 · הזמנה D015117085</li>
-      <li>🍷 <b>Le Petit Tonneau</b>, צ'פאלו — 2.10 בשעה 20:00 · €30 שולם</li>
+      <li>🚗 <b>רכב · Jeep Avenger</b> — Sicily By Car · <b>₪1,370 שולם</b> · איסוף Via Napoli 7.9 ב-11:00 → החזרה בשדה 12.9 ב-13:30 · הזמנה D015054423</li>
+      <li>🍷 <b>Le Petit Tonneau</b>, צ'פאלו — 7.9 בשעה 20:00 · €30 שולם</li>
       <li>🪪 <b>רישיון בינלאומי</b> לשניכם</li>
     </ul>
   </div>
 
   <div class="call">
-    <h3>🧾 מה לוקחים לדלפק ב-2.10</h3>
+    <h3>🧾 מה לוקחים לדלפק ב-7.9</h3>
     <ul>
       <li><b>רישיון נהיגה ישראלי פיזי</b> — לא אפליקציה</li>
       <li><b>רישיון בינלאומי (IDP)</b> — פיזי. הונפק 25.8</li>
@@ -625,7 +625,7 @@ footer.end{margin-top:4rem;padding-top:1.5rem;border-top:1px solid var(--hair);c
       <li>🌋 <b>אתנה</b> — רכבל + ג'יפ + מדריך, €82/אדם</li>
       <li>⛵ <b>סירת שקיעה בטאורמינה</b> — €90, מקס 12 אנשים</li>
       <li>🌊 <b>Body rafting באלקנטרה</b> — €39–45/אדם, בלי תשלום מראש</li>
-      <li>🎫 <b>קפלה פלטינה</b> (2.10) · <b>מונרעאלה</b> (7.10)</li>
+      <li>🎫 <b>קפלה פלטינה</b> (7.9) · <b>מונרעאלה</b> (12.9)</li>
       <li>🛡️ <b>ביטוח נסיעות עם כיסוי ביטול</b> — ~₪150, לפני 2 בספטמבר. זו ההגנה האמיתית מול ביטול טיסה</li>
     </ul>
   </div>
@@ -633,10 +633,10 @@ footer.end{margin-top:4rem;padding-top:1.5rem;border-top:1px solid var(--hair);c
   <div class="call">
     <h3>☎️ טלפונים — חמש דקות כל אחד</h3>
     <ul>
-      <li><b>Four Seasons San Domenico</b> · +39 0942 613 254 — קוקטייל 3.10</li>
+      <li><b>Four Seasons San Domenico</b> · +39 0942 613 254 — קוקטייל 8.9</li>
       <li><b>Le Petit Tonneau</b> · +39 0921 421447 — לוודא במפורש "in terrazza"</li>
       <li><b>Il Locale</b>, צ'פאלו — לוודא שהם עושים צהריים בכלל</li>
-      <li><b>Pirandello 2.0</b> (3.10) · <b>Sky Rooftop</b> (5.10)</li>
+      <li><b>Pirandello 2.0</b> (8.9) · <b>Sky Rooftop</b> (10.9)</li>
       <li><b>Taormina Park Hotel</b> — מחיר החניה, ואם Via Bagnoli Croci בתוך ה-ZTL</li>
       <li><b>YEASY</b> — השארת מזוודות אחרי צ'ק־אאוט עד 13:15, והזמנת חניה</li>
       <li><b>One</b> — וואטסאפ לריקארדו לאישור ההגעה ב-01:15 וכתובת לנהג</li>
