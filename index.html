@@ -640,18 +640,109 @@ footer.end{margin-top:4rem;padding-top:1.5rem;border-top:1px solid var(--hair);c
 
 <!-- PACK -->
 <section id="pack">
-  <h2 class="sec">מה לארוז</h2>
-  <div class="call">
-    <h3>הדברים שאם תשכחו — תפסידו משהו</h3>
-    <ul>
-      <li>👟 <b>נעלי מים</b> — איזולה בלה חלוקים, לא חול. גם לאלקנטרה.</li>
-      <li>🧥 <b>סוודר + נעליים סגורות לאתנה</b> — קר ב-2,500 מ' גם בספטמבר.</li>
-      <li>👔 <b>חולצה מכופתרת / מכנסיים ארוכים</b> — San Domenico ו-Sky Rooftop. לא שורט.</li>
-      <li>🩱 <b>בגד ים מתחת לבגדים</b> ביום הרפטינג.</li>
-      <li>💵 <b>מזומן</b> · 🪪 <b>רישיון פיזי + בינלאומי + PDF של כרטיס החזור</b> (משכירי רכב מבקשים).</li>
-      <li>🔌 מתאם · קרם הגנה · כובע.</li>
-    </ul>
+  <h2 class="sec">מה לארוז — צ'קליסט</h2>
+  <p class="pk-note">מסמנים וי על מה שנכנס לתיק. אפשר להוסיף פריטים בכל קטגוריה, ולמחוק את מה שהוספתם. <b>הסימונים נשמרים בטלפון הזה בלבד</b> — גל וקארין מסמנים כל אחד אצלו.</p>
+  <div class="pk-top"><div class="pk-bar"><div class="pk-fill"></div></div><span class="pk-total"></span>
+    <label class="pk-filter">מציג: <select id="pk-who"><option value="all">הכל</option><option value="גל">גל</option><option value="קארין">קארין</option></select></label>
+    <button type="button" id="pk-reset">איפוס סימונים</button></div>
+  <div class="call" style="margin-bottom:1rem"><b>🧳 המקום מוגבל:</b> מזוודה אחת של 20 ק"ג (על קארין) ושני תיקים קטנים של 40×30×20. <b>בתיקים הקטנים:</b> מסמכים, סוללה, מטענים, תרופות, בגד ים וחולצה להחלפה — ליתר ביטחון אם המזוודה מתעכבת.</div>
+  <div class="pk-grid">
+  <div class="pk-cat" data-cat="docs">
+    <div class="pk-cat-h"><h3>📄 מסמכים וכסף — הכי חשוב</h3><span class="pk-count"></span></div>
+    <ul class="pk-list"></ul>
+    <form class="pk-add" autocomplete="off"><input type="text" placeholder="להוסיף פריט…" aria-label="פריט חדש"><button type="submit">הוסף</button></form>
   </div>
+  <div class="pk-cat" data-cat="elec">
+    <div class="pk-cat-h"><h3>🔌 אלקטרוניקה</h3><span class="pk-count"></span></div>
+    <ul class="pk-list"></ul>
+    <form class="pk-add" autocomplete="off"><input type="text" placeholder="להוסיף פריט…" aria-label="פריט חדש"><button type="submit">הוסף</button></form>
+  </div>
+  <div class="pk-cat" data-cat="clothes">
+    <div class="pk-cat-h"><h3>👕 בגדים · 20–26° ביום, 18–20° בערב</h3><span class="pk-count"></span></div>
+    <ul class="pk-list"></ul>
+    <form class="pk-add" autocomplete="off"><input type="text" placeholder="להוסיף פריט…" aria-label="פריט חדש"><button type="submit">הוסף</button></form>
+  </div>
+  <div class="pk-cat" data-cat="etna">
+    <div class="pk-cat-h"><h3>🌋 אתנה · בפסגה 0–8° ורוח</h3><span class="pk-count"></span></div>
+    <ul class="pk-list"></ul>
+    <form class="pk-add" autocomplete="off"><input type="text" placeholder="להוסיף פריט…" aria-label="פריט חדש"><button type="submit">הוסף</button></form>
+  </div>
+  <div class="pk-cat" data-cat="sea">
+    <div class="pk-cat-h"><h3>🩱 ים ומים</h3><span class="pk-count"></span></div>
+    <ul class="pk-list"></ul>
+    <form class="pk-add" autocomplete="off"><input type="text" placeholder="להוסיף פריט…" aria-label="פריט חדש"><button type="submit">הוסף</button></form>
+  </div>
+  <div class="pk-cat" data-cat="health">
+    <div class="pk-cat-h"><h3>💊 בריאות</h3><span class="pk-count"></span></div>
+    <ul class="pk-list"></ul>
+    <form class="pk-add" autocomplete="off"><input type="text" placeholder="להוסיף פריט…" aria-label="פריט חדש"><button type="submit">הוסף</button></form>
+  </div>
+  </div>
+<style>
+.pk-note{color:var(--muted);margin:.2rem 0 1rem}
+.pk-top{display:flex;flex-wrap:wrap;align-items:center;gap:.7rem;margin:0 0 1rem}
+.pk-bar{flex:1 1 180px;height:10px;background:var(--hair);border-radius:99px;overflow:hidden}
+.pk-fill{height:100%;width:0;background:var(--olive);transition:width .25s}
+.pk-total{font-weight:700;font-variant-numeric:tabular-nums}
+.pk-filter select,#pk-reset,.pk-add button,.pk-add input{font:inherit;padding:.45rem .7rem;border:1px solid var(--hair);border-radius:10px;background:var(--card);color:var(--ink)}
+#pk-reset{cursor:pointer;color:var(--lava)}
+.pk-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:1rem}
+.pk-cat{background:var(--card);border:1px solid var(--hair);border-radius:16px;padding:1rem 1.1rem;box-shadow:var(--shadow)}
+.pk-cat-h{display:flex;justify-content:space-between;align-items:baseline;gap:.5rem}
+.pk-cat-h h3{margin:0 0 .5rem;font-size:1.08rem}
+.pk-count{color:var(--muted);font-size:.9rem;font-variant-numeric:tabular-nums;white-space:nowrap}
+.pk-list{list-style:none;margin:0;padding:0}
+.pk-list li{display:flex;align-items:center;gap:.6rem;padding:.55rem 0;border-bottom:1px dashed var(--hair)}
+.pk-list li:last-child{border-bottom:0}
+.pk-list input[type=checkbox]{width:22px;height:22px;flex:0 0 22px;accent-color:var(--olive);cursor:pointer}
+.pk-list label{flex:1;cursor:pointer;line-height:1.35}
+.pk-list li.done label{text-decoration:line-through;color:var(--muted)}
+.pk-who{font-size:.75rem;padding:.1rem .5rem;border-radius:99px;background:var(--sea-soft);color:var(--sea);white-space:nowrap}
+.pk-del{border:0;background:none;color:var(--lava);font-size:1.1rem;cursor:pointer;padding:0 .2rem}
+.pk-add{display:flex;gap:.4rem;margin-top:.6rem}
+.pk-add input{flex:1;min-width:0}
+.pk-add button{cursor:pointer;background:var(--sea);color:#fff;border-color:var(--sea)}
+</style>
+<script>
+(function(){
+  var SEED={"docs": [{"id": "docs0", "t": "דרכון — גל", "w": "גל"}, {"id": "docs1", "t": "דרכון — קארין", "w": "קארין"}, {"id": "docs2", "t": "רישיון נהיגה פלסטיק ישראלי", "w": "גל"}, {"id": "docs3", "t": "רישיון נהיגה בינלאומי (רק ביחד עם הפלסטיק)", "w": "גל"}, {"id": "docs4", "t": "כרטיס אשראי פיזי, מספרים מובלטים, על שם Gal Yaacobi — ל-Locauto", "w": "גל"}, {"id": "docs5", "t": "כרטיס אשראי גיבוי", "w": "שניהם"}, {"id": "docs6", "t": "מזומן ביורו, €150–200 (הסעה €65, טיפים)", "w": "שניהם"}, {"id": "docs7", "t": "5 אישורי PDF שמורים אופליין בטלפון", "w": "שניהם"}, {"id": "docs8", "t": "צילום מסך של הוראות הכניסה ל-Pànto", "w": "שניהם"}, {"id": "docs9", "t": "אפליקציית הביטוח (הפניקס) מחוברת", "w": "גל"}], "elec": [{"id": "elec0", "t": "מתאם חשמל לאיטליה — התקע הישראלי לא נכנס", "w": "שניהם"}, {"id": "elec1", "t": "סוללה ניידת — רק בתיק הקבינה", "w": "שניהם"}, {"id": "elec2", "t": "מטענים וכבלים", "w": "שניהם"}, {"id": "elec3", "t": "מפות אופליין של סיציליה בגוגל מפות", "w": "שניהם"}, {"id": "elec4", "t": "כיסוי אטום למים לטלפון (שייט + רפטינג)", "w": "שניהם"}], "clothes": [{"id": "clothes0", "t": "חולצות קלות ומכנסיים קצרים", "w": "שניהם"}, {"id": "clothes1", "t": "ז'קט קל / קרדיגן לערבים ולסירה", "w": "שניהם"}, {"id": "clothes2", "t": "מעיל גשם קל או מטרייה קטנה", "w": "שניהם"}, {"id": "clothes3", "t": "חולצה מכופתרת + מכנסיים ארוכים — San Domenico", "w": "גל"}, {"id": "clothes4", "t": "שמלה / לבוש ערב — San Domenico", "w": "קארין"}, {"id": "clothes5", "t": "נעלי הליכה נוחות", "w": "שניהם"}], "etna": [{"id": "etna0", "t": "מעיל שמגן מרוח", "w": "שניהם"}, {"id": "etna1", "t": "פליז / סוודר", "w": "שניהם"}, {"id": "etna2", "t": "מכנסיים ארוכים", "w": "שניהם"}, {"id": "etna3", "t": "נעליים סגורות", "w": "שניהם"}, {"id": "etna4", "t": "כפפות דקות וכובע", "w": "שניהם"}], "sea": [{"id": "sea0", "t": "בגד ים ×2", "w": "שניהם"}, {"id": "sea1", "t": "נעלי מים — איזולה בלה + אלקנטרה", "w": "שניהם"}, {"id": "sea2", "t": "מגבת חוף", "w": "שניהם"}, {"id": "sea3", "t": "קרם הגנה (לקנות שם)", "w": "שניהם"}], "health": [{"id": "health0", "t": "כדורים נגד בחילה בים", "w": "שניהם"}, {"id": "health1", "t": "משכך כאבים", "w": "שניהם"}, {"id": "health2", "t": "תרופות קבועות — בקבינה", "w": "שניהם"}]};
+  var KEY='sic26-pack-v1',st={checked:{},custom:{},who:'all'};
+  try{var r=localStorage.getItem(KEY);if(r)st=Object.assign(st,JSON.parse(r));}catch(e){}
+  function save(){try{localStorage.setItem(KEY,JSON.stringify(st));}catch(e){}}
+  function items(c){return (SEED[c]||[]).concat(st.custom[c]||[]);}
+  function vis(it){return st.who==='all'||it.w==='שניהם'||it.w===st.who;}
+  function render(){
+    var tot=0,don=0;
+    document.querySelectorAll('.pk-cat').forEach(function(box){
+      var c=box.dataset.cat,ul=box.querySelector('.pk-list');ul.innerHTML='';var ct=0,cd=0;
+      items(c).forEach(function(it){
+        if(!vis(it))return;var on=!!st.checked[it.id];ct++;if(on)cd++;
+        var li=document.createElement('li');if(on)li.className='done';
+        var cb=document.createElement('input');cb.type='checkbox';cb.id='pk_'+it.id;cb.checked=on;
+        cb.onchange=function(){if(cb.checked)st.checked[it.id]=1;else delete st.checked[it.id];save();render();};
+        var lb=document.createElement('label');lb.htmlFor=cb.id;lb.textContent=it.t;
+        li.appendChild(cb);li.appendChild(lb);
+        if(it.w){var w=document.createElement('span');w.className='pk-who';w.textContent=it.w;li.appendChild(w);}
+        if(it.c){var d=document.createElement('button');d.type='button';d.className='pk-del';d.title='מחיקה';d.textContent='✕';
+          d.onclick=function(){st.custom[c]=(st.custom[c]||[]).filter(function(x){return x.id!==it.id;});delete st.checked[it.id];save();render();};li.appendChild(d);}
+        ul.appendChild(li);
+      });
+      box.querySelector('.pk-count').textContent=cd+' / '+ct;tot+=ct;don+=cd;
+    });
+    document.querySelector('.pk-total').textContent=don+' מתוך '+tot+' ארוזים';
+    document.querySelector('.pk-fill').style.width=(tot?Math.round(don/tot*100):0)+'%';
+    document.getElementById('pk-who').value=st.who;
+  }
+  document.querySelectorAll('.pk-add').forEach(function(f){
+    f.addEventListener('submit',function(ev){ev.preventDefault();var inp=f.querySelector('input'),v=inp.value.trim();if(!v)return;
+      var c=f.closest('.pk-cat').dataset.cat;(st.custom[c]=st.custom[c]||[]).push({id:'u'+Date.now(),t:v,w:st.who==='all'?'':st.who,c:1});
+      inp.value='';save();render();});
+  });
+  document.getElementById('pk-who').onchange=function(){st.who=this.value;save();render();};
+  document.getElementById('pk-reset').onclick=function(){if(confirm('לאפס את כל הסימונים? פריטים שהוספתם יישארו.')){st.checked={};save();render();}};
+  render();
+})();
+</script>
 </section>
 
 <footer class="end">
